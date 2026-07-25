@@ -300,10 +300,22 @@
 
     <div id="cloudRestoreModal" class="modal">
         <div class="confirm-box">
-            <h3>☁ Restore Cloud Backup</h3>
+            <h3>☁ Cloud Backup Found</h3>
             <p>
-                A newer backup was found in Google Drive.
+                A backup was found in your Google Drive.
             </p>
+
+            <div class="backup-info">
+                <div class="backup-row">
+                    <span><strong>Cloud Backup</strong></span>
+                    <span id="cloudBackupTime">--</span>
+                </div>
+                <div class="backup-row">
+                    <span><strong>Current Local</strong></span>
+                    <span id="localBackupTime">--</span>
+                </div>
+            </div>
+
             <p>
                 Restoring will replace your current local progress.
                 This action cannot be undone.
@@ -314,7 +326,7 @@
                     Cancel
                 </button>
                 <button id="confirmCloudRestore">
-                    Restore
+                    Restore Backup
                 </button>
             </div>
         </div>
@@ -322,14 +334,13 @@
 
     <div id="cloudUploadModal" class="modal">
         <div class="confirm-box">
-            <h3>☁ Upload Local Backup</h3>
+            <h3>☁ No Cloud Backup Found</h3>
             <p>
-                Your local progress is newer than the cloud backup.
+                No backup exists in your Google Drive.
             </p>
             <p>
-                Uploading will overwrite the existing backup in Google Drive.
+                Upload your current progress to create your first cloud backup.
             </p>
-
             <div class="confirm-buttons">
                 <button id="cancelCloudUpload">
                     Cancel

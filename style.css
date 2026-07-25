@@ -868,3 +868,22 @@ input[type="checkbox"] {
     font-size:14px;
     color:#e5e7eb;
 }
+
+.backup-info{
+    margin:16px 0;
+    padding:12px;
+    border:1px solid #3d3d3d;
+    border-radius:8px;
+    background:#1f1f1f;
+}
+
+.backup-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:6px 0;
+}
+
+.backup-row:not(:last-child){
+    border-bottom:1px solid #3a3a3a;
+}

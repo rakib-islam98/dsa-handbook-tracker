@@ -194,62 +194,30 @@ async function updateBackup(fileId) {
 let pendingCloudBackup = null;
 let pendingFileId = null;
 
-function compareBackups(localBackup, cloudBackup) {
-    if (cloudBackup.app !== "DSA Handbook Tracker" || 
-        cloudBackup.version !== 1 || 
-        !cloudBackup.lastModified ||
-        typeof cloudBackup.data !== "object") {
-            throw new Error("Invalid cloud backup.");
-    }
-
-    const localTime = new Date(localBackup.lastModified).getTime();
-    const cloudTime = new Date(cloudBackup.lastModified).getTime();
-
-    if (localTime === cloudTime) {
-        return "same";
-    }
-    if (localTime > cloudTime) {
-        return "local";
-    }
-    return "cloud";
-}
-
 async function syncNow() {
     try {
-        const localBackup = createBackupObject();
         const files = await findBackupFile();
 
         if (files.length === 0) {
-            await uploadBackup();
-            showToast("Backup uploaded successfully.");
+            document.getElementById("cloudUploadModal")
+                .classList.add("show");
             return;
         }
 
         const file = files[0];
 
-        const cloudBackup = await downloadBackup(file.id);
+        pendingFileId = file.id;
+        pendingCloudBackup = await downloadBackup(file.id);
 
-        const result =
-            compareBackups(localBackup, cloudBackup);
+        const localBackup = createBackupObject();
 
-        switch(result){
+        document.getElementById("cloudBackupTime").textContent =
+            new Date(file.modifiedTime).toLocaleString();
+        document.getElementById("localBackupTime").textContent =
+            new Date(localBackup.lastModified).toLocaleString();
 
-            case "same":
-                showToast(
-                    "Backup is already up to date."
-                );
-                break;
-
-            case "cloud":
-                pendingCloudBackup = cloudBackup;
-                document.getElementById("cloudRestoreModal").classList.add("show");
-                break;
-
-            case "local":
-                pendingFileId = file.id;
-                document.getElementById("cloudUploadModal").classList.add("show");
-                break;
-        }
+        document.getElementById("cloudRestoreModal")
+        .classList.add("show");
     } catch(error) {
         console.error(error);
         showToast(error.message, "error");
@@ -299,10 +267,17 @@ async () => {
     document.getElementById("cloudUploadModal")
         .classList.remove("show");
     try {
-        await updateBackup(pendingFileId);
+        if (pendingFileId) {
+            await updateBackup(pendingFileId);
+            showToast("Cloud backup updated.");
+        }
+        else {
+            await uploadBackup();
+            showToast("Cloud backup created.");
+        }
         pendingCloudBackup = null;
         pendingFileId = null;
-        showToast("Cloud backup updated.");
+        
     } catch(error){
         console.error(error);
         showToast(error.message,"error");
