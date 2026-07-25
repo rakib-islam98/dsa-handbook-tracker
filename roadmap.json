@@ -1,0 +1,3594 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "name": "Arrays",
+      "patterns": [
+        {
+          "id": "A1",
+          "title": "Running Minimum / Maximum",
+          "problems": [
+            {
+              "id": "LC121",
+              "name": "Best Time to Buy and Sell Stock",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+            },
+            {
+              "id": "LC2016",
+              "name": "Maximum Difference Between Increasing Elements",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-difference-between-increasing-elements/"
+            },
+            {
+              "id": "LC152",
+              "name": "Maximum Product Subarray",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-product-subarray/"
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "title": "Kadane's Algorithm",
+          "problems": [
+            {
+              "id": "LC53",
+              "name": "Maximum Subarray",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-subarray/"
+            },
+            {
+              "id": "LC918",
+              "name": "Maximum Sum Circular Subarray",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-sum-circular-subarray/"
+            },
+            {
+              "id": "LC1749",
+              "name": "Maximum Absolute Sum of Any Subarray",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/"
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "title": "Basic Prefix Sum",
+          "problems": [
+            {
+              "id": "LC1480",
+              "name": "Running Sum of 1D Array",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/running-sum-of-1d-array/"
+            },
+            {
+              "id": "LC303",
+              "name": "Range Sum Query - Immutable",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/range-sum-query-immutable/"
+            },
+            {
+              "id": "LC724",
+              "name": "Find Pivot Index",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-pivot-index/"
+            }
+          ]
+        },
+        {
+          "id": "A4",
+          "title": "In-place Array Manipulation",
+          "problems": [
+            {
+              "id": "LC283",
+              "name": "Move Zeroes",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/move-zeroes/"
+            },
+            {
+              "id": "LC26",
+              "name": "Remove Duplicates from Sorted Array",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
+            },
+            {
+              "id": "LC75",
+              "name": "Sort Colors",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/sort-colors/"
+            },
+            {
+              "id": "LC41",
+              "name": "First Missing Positive",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/first-missing-positive/"
+            }
+          ]
+        },
+        {
+          "id": "A5",
+          "title": "Matrix Traversal & Transformation",
+          "problems": [
+            {
+              "id": "LC48",
+              "name": "Rotate Image",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/rotate-image/"
+            },
+            {
+              "id": "LC73",
+              "name": "Set Matrix Zeroes",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/set-matrix-zeroes/"
+            },
+            {
+              "id": "LC54",
+              "name": "Spiral Matrix",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/spiral-matrix/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC238",
+          "name": "Product of Array Except Self",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/product-of-array-except-self/"
+        },
+        {
+          "id": "LC169",
+          "name": "Majority Element",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/majority-element/"
+        },
+        {
+          "id": "LC189",
+          "name": "Rotate Array",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/rotate-array/"
+        },
+        {
+          "id": "LC31",
+          "name": "Next Permutation",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/next-permutation/"
+        },
+        {
+          "id": "LC485",
+          "name": "Max Consecutive Ones",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/max-consecutive-ones/"
+        },
+        {
+          "id": "LC414",
+          "name": "Third Maximum Number",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/third-maximum-number/"
+        },
+        {
+          "id": "LC442",
+          "name": "Find All Duplicates in an Array",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-all-duplicates-in-an-array/"
+        },
+        {
+          "id": "LC287",
+          "name": "Find the Duplicate Number",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-the-duplicate-number/"
+        },
+        {
+          "id": "LC289",
+          "name": "Game of Life",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/game-of-life/"
+        },
+        {
+          "id": "LC448",
+          "name": "Find All Numbers Disappeared in an Array",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "HashMap",
+      "patterns": [
+        {
+          "id": "H1",
+          "title": "Direct Lookup",
+          "problems": [
+            {
+              "id": "LC1",
+              "name": "Two Sum",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/two-sum/"
+            },
+            {
+              "id": "LC217",
+              "name": "Contains Duplicate",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/contains-duplicate/"
+            },
+            {
+              "id": "LC219",
+              "name": "Contains Duplicate II",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/contains-duplicate-ii/"
+            }
+          ]
+        },
+        {
+          "id": "H2",
+          "title": "Frequency Counting",
+          "problems": [
+            {
+              "id": "LC242",
+              "name": "Valid Anagram",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/valid-anagram/"
+            },
+            {
+              "id": "LC383",
+              "name": "Ransom Note",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/ransom-note/"
+            },
+            {
+              "id": "LC49",
+              "name": "Group Anagrams",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/group-anagrams/"
+            },
+            {
+              "id": "LC347",
+              "name": "Top K Frequent Elements",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+            }
+          ]
+        },
+        {
+          "id": "H3",
+          "title": "Prefix Sum + HashMap",
+          "problems": [
+            {
+              "id": "LC560",
+              "name": "Subarray Sum Equals K",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/subarray-sum-equals-k/"
+            },
+            {
+              "id": "LC525",
+              "name": "Contiguous Array",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/contiguous-array/"
+            },
+            {
+              "id": "LC974",
+              "name": "Subarray Sums Divisible by K",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/subarray-sums-divisible-by-k/"
+            }
+          ]
+        },
+        {
+          "id": "H4",
+          "title": "Mapping Relationships",
+          "problems": [
+            {
+              "id": "LC205",
+              "name": "Isomorphic Strings",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/isomorphic-strings/"
+            },
+            {
+              "id": "LC290",
+              "name": "Word Pattern",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/word-pattern/"
+            },
+            {
+              "id": "LC890",
+              "name": "Find and Replace Pattern",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-and-replace-pattern/"
+            }
+          ]
+        },
+        {
+          "id": "H5",
+          "title": "Set-Based Traversal",
+          "problems": [
+            {
+              "id": "LC128",
+              "name": "Longest Consecutive Sequence",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/longest-consecutive-sequence/"
+            },
+            {
+              "id": "LC202",
+              "name": "Happy Number",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/happy-number/"
+            },
+            {
+              "id": "LC36",
+              "name": "Valid Sudoku",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/valid-sudoku/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC454",
+          "name": "4Sum II",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/4sum-ii/"
+        },
+        {
+          "id": "LC771",
+          "name": "Jewels and Stones",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/jewels-and-stones/"
+        },
+        {
+          "id": "LC1207",
+          "name": "Unique Number of Occurrences",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/unique-number-of-occurrences/"
+        },
+        {
+          "id": "LC594",
+          "name": "Longest Harmonious Subsequence",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/longest-harmonious-subsequence/"
+        },
+        {
+          "id": "LC350",
+          "name": "Intersection of Two Arrays II",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/intersection-of-two-arrays-ii/"
+        },
+        {
+          "id": "LC1002",
+          "name": "Find Common Characters",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-common-characters/"
+        },
+        {
+          "id": "LC149",
+          "name": "Max Points on a Line",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/max-points-on-a-line/"
+        },
+        {
+          "id": "LC939",
+          "name": "Minimum Area Rectangle",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-area-rectangle/"
+        },
+        {
+          "id": "LC447",
+          "name": "Number of Boomerangs",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/number-of-boomerangs/"
+        },
+        {
+          "id": "LC523",
+          "name": "Continuous Subarray Sum",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/continuous-subarray-sum/"
+        },
+        {
+          "id": "LC895",
+          "name": "Maximum Frequency Stack",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximum-frequency-stack/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Two Pointers",
+      "patterns": [
+        {
+          "id": "TP1",
+          "title": "Opposite Direction Two Pointers",
+          "problems": [
+            {
+              "id": "LC167",
+              "name": "Two Sum II - Input Array Is Sorted",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+            },
+            {
+              "id": "LC11",
+              "name": "Container With Most Water",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/container-with-most-water/"
+            },
+            {
+              "id": "LC15",
+              "name": "3Sum",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/3sum/"
+            }
+          ]
+        },
+        {
+          "id": "TP2",
+          "title": "Same Direction (Fast & Slow)",
+          "problems": [
+            {
+              "id": "LC27",
+              "name": "Remove Element",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/remove-element/"
+            },
+            {
+              "id": "LC26",
+              "name": "Remove Duplicates from Sorted Array",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
+            },
+            {
+              "id": "LC80",
+              "name": "Remove Duplicates from Sorted Array II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/"
+            }
+          ]
+        },
+        {
+          "id": "TP3",
+          "title": "Merge Two Sequences",
+          "problems": [
+            {
+              "id": "LC88",
+              "name": "Merge Sorted Array",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/merge-sorted-array/"
+            },
+            {
+              "id": "LC392",
+              "name": "Is Subsequence",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/is-subsequence/"
+            },
+            {
+              "id": "LC977",
+              "name": "Squares of a Sorted Array",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/squares-of-a-sorted-array/"
+            }
+          ]
+        },
+        {
+          "id": "TP4",
+          "title": "Cycle Detection (Fast & Slow)",
+          "problems": [
+            {
+              "id": "LC141",
+              "name": "Linked List Cycle",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/linked-list-cycle/"
+            },
+            {
+              "id": "LC142",
+              "name": "Linked List Cycle II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/linked-list-cycle-ii/"
+            },
+            {
+              "id": "LC287",
+              "name": "Find the Duplicate Number",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-the-duplicate-number/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC125",
+          "name": "Valid Palindrome",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/valid-palindrome/"
+        },
+        {
+          "id": "LC344",
+          "name": "Reverse String",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/reverse-string/"
+        },
+        {
+          "id": "LC680",
+          "name": "Valid Palindrome II",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/valid-palindrome-ii/"
+        },
+        {
+          "id": "LC349",
+          "name": "Intersection of Two Arrays",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/intersection-of-two-arrays/"
+        },
+        {
+          "id": "LC844",
+          "name": "Backspace String Compare",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/backspace-string-compare/"
+        },
+        {
+          "id": "LC905",
+          "name": "Sort Array By Parity",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/sort-array-by-parity/"
+        },
+        {
+          "id": "LC42",
+          "name": "Trapping Rain Water",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/trapping-rain-water/"
+        },
+        {
+          "id": "LC16",
+          "name": "3Sum Closest",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/3sum-closest/"
+        },
+        {
+          "id": "LC18",
+          "name": "4Sum",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/4sum/"
+        },
+        {
+          "id": "LC986",
+          "name": "Interval List Intersections",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/interval-list-intersections/"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sliding Window",
+      "patterns": [
+        {
+          "id": "SW1",
+          "title": "Fixed Size Sliding Window",
+          "problems": [
+            {
+              "id": "LC643",
+              "name": "Maximum Average Subarray I",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-average-subarray-i/"
+            },
+            {
+              "id": "LC1456",
+              "name": "Maximum Number of Vowels in a Substring of Given Length",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/"
+            },
+            {
+              "id": "LC1343",
+              "name": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/"
+            }
+          ]
+        },
+        {
+          "id": "SW2",
+          "title": "Variable Size Sliding Window",
+          "problems": [
+            {
+              "id": "LC209",
+              "name": "Minimum Size Subarray Sum",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+            },
+            {
+              "id": "LC3",
+              "name": "Longest Substring Without Repeating Characters",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+            },
+            {
+              "id": "LC713",
+              "name": "Subarray Product Less Than K",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/subarray-product-less-than-k/"
+            }
+          ]
+        },
+        {
+          "id": "SW3",
+          "title": "Sliding Window + Frequency Map",
+          "problems": [
+            {
+              "id": "LC567",
+              "name": "Permutation in String",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/permutation-in-string/"
+            },
+            {
+              "id": "LC438",
+              "name": "Find All Anagrams in a String",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/"
+            },
+            {
+              "id": "LC424",
+              "name": "Longest Repeating Character Replacement",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+            }
+          ]
+        },
+        {
+          "id": "SW4",
+          "title": "Advanced Variable Sliding Window",
+          "problems": [
+            {
+              "id": "LC904",
+              "name": "Fruit Into Baskets",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/fruit-into-baskets/"
+            },
+            {
+              "id": "LC1004",
+              "name": "Max Consecutive Ones III",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/max-consecutive-ones-iii/"
+            },
+            {
+              "id": "LC76",
+              "name": "Minimum Window Substring",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/minimum-window-substring/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC1876",
+          "name": "Substrings of Size Three with Distinct Characters",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/"
+        },
+        {
+          "id": "LC1052",
+          "name": "Grumpy Bookstore Owner",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/grumpy-bookstore-owner/"
+        },
+        {
+          "id": "LC1208",
+          "name": "Get Equal Substrings Within Budget",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/get-equal-substrings-within-budget/"
+        },
+        {
+          "id": "LC1493",
+          "name": "Longest Subarray of 1's After Deleting One Element",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/"
+        },
+        {
+          "id": "LC2024",
+          "name": "Maximize the Confusion of an Exam",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximize-the-confusion-of-an-exam/"
+        },
+        {
+          "id": "LC1838",
+          "name": "Frequency of the Most Frequent Element",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/frequency-of-the-most-frequent-element/"
+        },
+        {
+          "id": "LC992",
+          "name": "Subarrays with K Different Integers",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/subarrays-with-k-different-integers/"
+        },
+        {
+          "id": "LC1234",
+          "name": "Replace the Substring for Balanced String",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/replace-the-substring-for-balanced-string/"
+        },
+        {
+          "id": "LC1358",
+          "name": "Number of Substrings Containing All Three Characters",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/"
+        },
+        {
+          "id": "LC2302",
+          "name": "Count Subarrays With Score Less Than K",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/count-subarrays-with-score-less-than-k/"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Binary Search",
+      "patterns": [
+        {
+          "id": "BS1",
+          "title": "Classic Binary Search",
+          "problems": [
+            {
+              "id": "LC704",
+              "name": "Binary Search",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-search/"
+            },
+            {
+              "id": "LC35",
+              "name": "Search Insert Position",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/search-insert-position/"
+            },
+            {
+              "id": "LC278",
+              "name": "First Bad Version",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/first-bad-version/"
+            }
+          ]
+        },
+        {
+          "id": "BS2",
+          "title": "Binary Search on Boundaries",
+          "problems": [
+            {
+              "id": "LC34",
+              "name": "Find First and Last Position of Element in Sorted Array",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
+            },
+            {
+              "id": "LC540",
+              "name": "Single Element in a Sorted Array",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/single-element-in-a-sorted-array/"
+            },
+            {
+              "id": "LC744",
+              "name": "Find Smallest Letter Greater Than Target",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-smallest-letter-greater-than-target/"
+            }
+          ]
+        },
+        {
+          "id": "BS3",
+          "title": "Binary Search on Rotated Arrays",
+          "problems": [
+            {
+              "id": "LC33",
+              "name": "Search in Rotated Sorted Array",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+            },
+            {
+              "id": "LC81",
+              "name": "Search in Rotated Sorted Array II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/"
+            },
+            {
+              "id": "LC153",
+              "name": "Find Minimum in Rotated Sorted Array",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
+            }
+          ]
+        },
+        {
+          "id": "BS4",
+          "title": "Binary Search on Answer",
+          "problems": [
+            {
+              "id": "LC875",
+              "name": "Koko Eating Bananas",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/koko-eating-bananas/"
+            },
+            {
+              "id": "LC1011",
+              "name": "Capacity To Ship Packages Within D Days",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/"
+            },
+            {
+              "id": "LC1283",
+              "name": "Find the Smallest Divisor Given a Threshold",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC69",
+          "name": "Sqrt(x)",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/sqrtx/"
+        },
+        {
+          "id": "LC367",
+          "name": "Valid Perfect Square",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/valid-perfect-square/"
+        },
+        {
+          "id": "LC852",
+          "name": "Peak Index in a Mountain Array",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/peak-index-in-a-mountain-array/"
+        },
+        {
+          "id": "LC162",
+          "name": "Find Peak Element",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-peak-element/"
+        },
+        {
+          "id": "LC374",
+          "name": "Guess Number Higher or Lower",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/guess-number-higher-or-lower/"
+        },
+        {
+          "id": "LC1539",
+          "name": "Kth Missing Positive Number",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/kth-missing-positive-number/"
+        },
+        {
+          "id": "LC4",
+          "name": "Median of Two Sorted Arrays",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/"
+        },
+        {
+          "id": "LC410",
+          "name": "Split Array Largest Sum",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/split-array-largest-sum/"
+        },
+        {
+          "id": "LC1482",
+          "name": "Minimum Number of Days to Make m Bouquets",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/"
+        },
+        {
+          "id": "LC1552",
+          "name": "Magnetic Force Between Two Balls",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/magnetic-force-between-two-balls/"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Stack",
+      "patterns": [
+        {
+          "id": "ST1",
+          "title": "Balanced Parentheses",
+          "problems": [
+            {
+              "id": "LC20",
+              "name": "Valid Parentheses",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/valid-parentheses/"
+            },
+            {
+              "id": "LC1614",
+              "name": "Maximum Nesting Depth of the Parentheses",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/"
+            },
+            {
+              "id": "LC1021",
+              "name": "Remove Outermost Parentheses",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/remove-outermost-parentheses/"
+            }
+          ]
+        },
+        {
+          "id": "ST2",
+          "title": "Monotonic Stack",
+          "problems": [
+            {
+              "id": "LC496",
+              "name": "Next Greater Element I",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/next-greater-element-i/"
+            },
+            {
+              "id": "LC739",
+              "name": "Daily Temperatures",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/daily-temperatures/"
+            },
+            {
+              "id": "LC503",
+              "name": "Next Greater Element II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/next-greater-element-ii/"
+            }
+          ]
+        },
+        {
+          "id": "ST3",
+          "title": "Expression Evaluation",
+          "problems": [
+            {
+              "id": "LC150",
+              "name": "Evaluate Reverse Polish Notation",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/"
+            },
+            {
+              "id": "LC224",
+              "name": "Basic Calculator",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/basic-calculator/"
+            },
+            {
+              "id": "LC227",
+              "name": "Basic Calculator II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/basic-calculator-ii/"
+            }
+          ]
+        },
+        {
+          "id": "ST4",
+          "title": "Stack Simulation",
+          "problems": [
+            {
+              "id": "LC1047",
+              "name": "Remove All Adjacent Duplicates In String",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/"
+            },
+            {
+              "id": "LC2390",
+              "name": "Removing Stars From a String",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/removing-stars-from-a-string/"
+            },
+            {
+              "id": "LC735",
+              "name": "Asteroid Collision",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/asteroid-collision/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC71",
+          "name": "Simplify Path",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/simplify-path/"
+        },
+        {
+          "id": "LC682",
+          "name": "Baseball Game",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/baseball-game/"
+        },
+        {
+          "id": "LC946",
+          "name": "Validate Stack Sequences",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/validate-stack-sequences/"
+        },
+        {
+          "id": "LC1544",
+          "name": "Make The String Great",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/make-the-string-great/"
+        },
+        {
+          "id": "LC1475",
+          "name": "Final Prices With a Special Discount in a Shop",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/"
+        },
+        {
+          "id": "LC921",
+          "name": "Minimum Add to Make Parentheses Valid",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/"
+        },
+        {
+          "id": "LC84",
+          "name": "Largest Rectangle in Histogram",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+        },
+        {
+          "id": "LC85",
+          "name": "Maximal Rectangle",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximal-rectangle/"
+        },
+        {
+          "id": "LC456",
+          "name": "132 Pattern",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/132-pattern/"
+        },
+        {
+          "id": "LC402",
+          "name": "Remove K Digits",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/remove-k-digits/"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Queue",
+      "patterns": [
+        {
+          "id": "QD1",
+          "title": "Queue Simulation",
+          "problems": [
+            {
+              "id": "LC933",
+              "name": "Number of Recent Calls",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/number-of-recent-calls/"
+            },
+            {
+              "id": "LC1700",
+              "name": "Number of Students Unable to Eat Lunch",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/"
+            },
+            {
+              "id": "LC2073",
+              "name": "Time Needed to Buy Tickets",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/time-needed-to-buy-tickets/"
+            }
+          ]
+        },
+        {
+          "id": "QD2",
+          "title": "Monotonic Deque",
+          "problems": [
+            {
+              "id": "LC239",
+              "name": "Sliding Window Maximum",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/sliding-window-maximum/"
+            },
+            {
+              "id": "LC862",
+              "name": "Shortest Subarray with Sum at Least K",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/"
+            },
+            {
+              "id": "LC1438",
+              "name": "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/"
+            }
+          ]
+        },
+        {
+          "id": "QD3",
+          "title": "Circular Queue & Deque",
+          "problems": [
+            {
+              "id": "LC622",
+              "name": "Design Circular Queue",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/design-circular-queue/"
+            },
+            {
+              "id": "LC641",
+              "name": "Design Circular Deque",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/design-circular-deque/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC649",
+          "name": "Dota2 Senate",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/dota2-senate/"
+        },
+        {
+          "id": "LC950",
+          "name": "Reveal Cards In Increasing Order",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/reveal-cards-in-increasing-order/"
+        },
+        {
+          "id": "LC346",
+          "name": "Moving Average from Data Stream",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/moving-average-from-data-stream/"
+        },
+        {
+          "id": "LC1823",
+          "name": "Find the Winner of the Circular Game",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-the-winner-of-the-circular-game/"
+        },
+        {
+          "id": "LC1670",
+          "name": "Design Front Middle Back Queue",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/design-front-middle-back-queue/"
+        },
+        {
+          "id": "LC232",
+          "name": "Implement Queue using Stacks",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/implement-queue-using-stacks/"
+        },
+        {
+          "id": "LC1696",
+          "name": "Jump Game VI",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/jump-game-vi/"
+        },
+        {
+          "id": "LC1425",
+          "name": "Constrained Subsequence Sum",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/constrained-subsequence-sum/"
+        },
+        {
+          "id": "LC1499",
+          "name": "Max Value of Equation",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/max-value-of-equation/"
+        },
+        {
+          "id": "LC995",
+          "name": "Minimum Number of K Consecutive Bit Flips",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Linked List",
+      "patterns": [
+        {
+          "id": "LL1",
+          "title": "Linked List Traversal & Dummy Node",
+          "problems": [
+            {
+              "id": "LC203",
+              "name": "Remove Linked List Elements",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/remove-linked-list-elements/"
+            },
+            {
+              "id": "LC206",
+              "name": "Reverse Linked List",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/reverse-linked-list/"
+            },
+            {
+              "id": "LC21",
+              "name": "Merge Two Sorted Lists",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/merge-two-sorted-lists/"
+            }
+          ]
+        },
+        {
+          "id": "LL2",
+          "title": "Fast & Slow Pointer",
+          "problems": [
+            {
+              "id": "LC876",
+              "name": "Middle of the Linked List",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+            },
+            {
+              "id": "LC234",
+              "name": "Palindrome Linked List",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/palindrome-linked-list/"
+            },
+            {
+              "id": "LC143",
+              "name": "Reorder List",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/reorder-list/"
+            }
+          ]
+        },
+        {
+          "id": "LL3",
+          "title": "Reverse in Groups",
+          "problems": [
+            {
+              "id": "LC92",
+              "name": "Reverse Linked List II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/reverse-linked-list-ii/"
+            },
+            {
+              "id": "LC24",
+              "name": "Swap Nodes in Pairs",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/swap-nodes-in-pairs/"
+            },
+            {
+              "id": "LC25",
+              "name": "Reverse Nodes in k-Group",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
+            }
+          ]
+        },
+        {
+          "id": "LL4",
+          "title": "Linked List Intersection & Cycle",
+          "problems": [
+            {
+              "id": "LC160",
+              "name": "Intersection of Two Linked Lists",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/intersection-of-two-linked-lists/"
+            },
+            {
+              "id": "LC141",
+              "name": "Linked List Cycle",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/linked-list-cycle/"
+            },
+            {
+              "id": "LC142",
+              "name": "Linked List Cycle II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/linked-list-cycle-ii/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC83",
+          "name": "Remove Duplicates from Sorted List",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/"
+        },
+        {
+          "id": "LC328",
+          "name": "Odd Even Linked List",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/odd-even-linked-list/"
+        },
+        {
+          "id": "LC237",
+          "name": "Delete Node in a Linked List",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/delete-node-in-a-linked-list/"
+        },
+        {
+          "id": "LC1290",
+          "name": "Convert Binary Number in a Linked List to Integer",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/"
+        },
+        {
+          "id": "LC1721",
+          "name": "Swapping Nodes in a Linked List",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/swapping-nodes-in-a-linked-list/"
+        },
+        {
+          "id": "LC19",
+          "name": "Remove Nth Node From End of List",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+        },
+        {
+          "id": "LC138",
+          "name": "Copy List with Random Pointer",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/copy-list-with-random-pointer/"
+        },
+        {
+          "id": "LC430",
+          "name": "Flatten a Multilevel Doubly Linked List",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/"
+        },
+        {
+          "id": "LC445",
+          "name": "Add Two Numbers II",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/add-two-numbers-ii/"
+        },
+        {
+          "id": "LC61",
+          "name": "Rotate List",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/rotate-list/"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Heap",
+      "patterns": [
+        {
+          "id": "HP1",
+          "title": "Top K Elements",
+          "problems": [
+            {
+              "id": "LC215",
+              "name": "Kth Largest Element in an Array",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+            },
+            {
+              "id": "LC703",
+              "name": "Kth Largest Element in a Stream",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/"
+            },
+            {
+              "id": "LC347",
+              "name": "Top K Frequent Elements",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+            }
+          ]
+        },
+        {
+          "id": "HP2",
+          "title": "Merge Multiple Sorted Collections",
+          "problems": [
+            {
+              "id": "LC23",
+              "name": "Merge k Sorted Lists",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/merge-k-sorted-lists/"
+            },
+            {
+              "id": "LC378",
+              "name": "Kth Smallest Element in a Sorted Matrix",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/"
+            },
+            {
+              "id": "LC373",
+              "name": "Find K Pairs with Smallest Sums",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/"
+            }
+          ]
+        },
+        {
+          "id": "HP3",
+          "title": "Scheduling & Greedy with Heap",
+          "problems": [
+            {
+              "id": "LC2406",
+              "name": "Divide Intervals Into Minimum Number of Groups",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/"
+            },
+            {
+              "id": "LC1642",
+              "name": "Furthest Building You Can Reach",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/furthest-building-you-can-reach/"
+            },
+            {
+              "id": "LC502",
+              "name": "IPO",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/ipo/"
+            }
+          ]
+        },
+        {
+          "id": "HP4",
+          "title": "Two Heaps",
+          "problems": [
+            {
+              "id": "LC295",
+              "name": "Find Median from Data Stream",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-median-from-data-stream/"
+            },
+            {
+              "id": "LC480",
+              "name": "Sliding Window Median",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/sliding-window-median/"
+            },
+            {
+              "id": "LC2102",
+              "name": "Sequentially Ordinal Rank Tracker",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/sequentially-ordinal-rank-tracker/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC1046",
+          "name": "Last Stone Weight",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/last-stone-weight/"
+        },
+        {
+          "id": "LC973",
+          "name": "K Closest Points to Origin",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/k-closest-points-to-origin/"
+        },
+        {
+          "id": "LC506",
+          "name": "Relative Ranks",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/relative-ranks/"
+        },
+        {
+          "id": "LC692",
+          "name": "Top K Frequent Words",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/top-k-frequent-words/"
+        },
+        {
+          "id": "LC1962",
+          "name": "Remove Stones to Minimize the Total",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/remove-stones-to-minimize-the-total/"
+        },
+        {
+          "id": "LC2558",
+          "name": "Take Gifts From the Richest Pile",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/take-gifts-from-the-richest-pile/"
+        },
+        {
+          "id": "LC632",
+          "name": "Smallest Range Covering Elements from K Lists",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/"
+        },
+        {
+          "id": "LC857",
+          "name": "Minimum Cost to Hire K Workers",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-cost-to-hire-k-workers/"
+        },
+        {
+          "id": "LC1834",
+          "name": "Single-Threaded CPU",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/single-threaded-cpu/"
+        },
+        {
+          "id": "LC1882",
+          "name": "Process Tasks Using Servers",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/process-tasks-using-servers/"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Trees",
+      "patterns": [
+        {
+          "id": "TR1",
+          "title": "DFS Traversal",
+          "problems": [
+            {
+              "id": "LC94",
+              "name": "Binary Tree Inorder Traversal",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
+            },
+            {
+              "id": "LC144",
+              "name": "Binary Tree Preorder Traversal",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-tree-preorder-traversal/"
+            },
+            {
+              "id": "LC145",
+              "name": "Binary Tree Postorder Traversal",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-tree-postorder-traversal/"
+            }
+          ]
+        },
+        {
+          "id": "TR2",
+          "title": "BFS / Level Order Traversal",
+          "problems": [
+            {
+              "id": "LC102",
+              "name": "Binary Tree Level Order Traversal",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+            },
+            {
+              "id": "LC107",
+              "name": "Binary Tree Level Order Traversal II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-tree-level-order-traversal-ii/"
+            },
+            {
+              "id": "LC199",
+              "name": "Binary Tree Right Side View",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-tree-right-side-view/"
+            }
+          ]
+        },
+        {
+          "id": "TR3",
+          "title": "Recursive Divide & Conquer",
+          "problems": [
+            {
+              "id": "LC104",
+              "name": "Maximum Depth of Binary Tree",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+            },
+            {
+              "id": "LC110",
+              "name": "Balanced Binary Tree",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/balanced-binary-tree/"
+            },
+            {
+              "id": "LC543",
+              "name": "Diameter of Binary Tree",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/diameter-of-binary-tree/"
+            }
+          ]
+        },
+        {
+          "id": "TR4",
+          "title": "Path Problems",
+          "problems": [
+            {
+              "id": "LC112",
+              "name": "Path Sum",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/path-sum/"
+            },
+            {
+              "id": "LC113",
+              "name": "Path Sum II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/path-sum-ii/"
+            },
+            {
+              "id": "LC124",
+              "name": "Binary Tree Maximum Path Sum",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+            }
+          ]
+        },
+        {
+          "id": "TR5",
+          "title": "Lowest Common Ancestor",
+          "problems": [
+            {
+              "id": "LC236",
+              "name": "Lowest Common Ancestor of a Binary Tree",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+            },
+            {
+              "id": "LC235",
+              "name": "Lowest Common Ancestor of a Binary Search Tree",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+            },
+            {
+              "id": "LC865",
+              "name": "Smallest Subtree with all the Deepest Nodes",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/"
+            }
+          ]
+        },
+        {
+          "id": "TR6",
+          "title": "Tree Construction & Serialization",
+          "problems": [
+            {
+              "id": "LC105",
+              "name": "Construct Binary Tree from Preorder and Inorder Traversal",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+            },
+            {
+              "id": "LC106",
+              "name": "Construct Binary Tree from Inorder and Postorder Traversal",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/"
+            },
+            {
+              "id": "LC297",
+              "name": "Serialize and Deserialize Binary Tree",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/"
+            }
+          ]
+        },
+        {
+          "id": "TR7",
+          "title": "Binary Search Tree",
+          "problems": [
+            {
+              "id": "LC98",
+              "name": "Validate Binary Search Tree",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/validate-binary-search-tree/"
+            },
+            {
+              "id": "LC230",
+              "name": "Kth Smallest Element in a BST",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+            },
+            {
+              "id": "LC700",
+              "name": "Search in a Binary Search Tree",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/search-in-a-binary-search-tree/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC101",
+          "name": "Symmetric Tree",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/symmetric-tree/"
+        },
+        {
+          "id": "LC226",
+          "name": "Invert Binary Tree",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/invert-binary-tree/"
+        },
+        {
+          "id": "LC257",
+          "name": "Binary Tree Paths",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/binary-tree-paths/"
+        },
+        {
+          "id": "LC404",
+          "name": "Sum of Left Leaves",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/sum-of-left-leaves/"
+        },
+        {
+          "id": "LC637",
+          "name": "Average of Levels in Binary Tree",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/average-of-levels-in-binary-tree/"
+        },
+        {
+          "id": "LC572",
+          "name": "Subtree of Another Tree",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/subtree-of-another-tree/"
+        },
+        {
+          "id": "LC114",
+          "name": "Flatten Binary Tree to Linked List",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/"
+        },
+        {
+          "id": "LC437",
+          "name": "Path Sum III",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/path-sum-iii/"
+        },
+        {
+          "id": "LC662",
+          "name": "Maximum Width of Binary Tree",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximum-width-of-binary-tree/"
+        },
+        {
+          "id": "LC987",
+          "name": "Vertical Order Traversal of a Binary Tree",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Graphs",
+      "patterns": [
+        {
+          "id": "GR1",
+          "title": "Graph Representation & Traversal",
+          "problems": [
+            {
+              "id": "LC200",
+              "name": "Number of Islands",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/number-of-islands/"
+            },
+            {
+              "id": "LC733",
+              "name": "Flood Fill",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/flood-fill/"
+            },
+            {
+              "id": "LC695",
+              "name": "Max Area of Island",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/max-area-of-island/"
+            }
+          ]
+        },
+        {
+          "id": "GR2",
+          "title": "Multi-Source BFS",
+          "problems": [
+            {
+              "id": "LC994",
+              "name": "Rotting Oranges",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/rotting-oranges/"
+            },
+            {
+              "id": "LC542",
+              "name": "01 Matrix",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/01-matrix/"
+            },
+            {
+              "id": "LC286",
+              "name": "Walls and Gates",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/walls-and-gates/"
+            }
+          ]
+        },
+        {
+          "id": "GR3",
+          "title": "Topological Sort",
+          "problems": [
+            {
+              "id": "LC207",
+              "name": "Course Schedule",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/course-schedule/"
+            },
+            {
+              "id": "LC210",
+              "name": "Course Schedule II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/course-schedule-ii/"
+            },
+            {
+              "id": "LC802",
+              "name": "Find Eventual Safe States",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-eventual-safe-states/"
+            }
+          ]
+        },
+        {
+          "id": "GR4",
+          "title": "Union-Find (Disjoint Set Union)",
+          "problems": [
+            {
+              "id": "LC547",
+              "name": "Number of Provinces",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/number-of-provinces/"
+            },
+            {
+              "id": "LC684",
+              "name": "Redundant Connection",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/redundant-connection/"
+            },
+            {
+              "id": "LC1319",
+              "name": "Number of Operations to Make Network Connected",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/"
+            }
+          ]
+        },
+        {
+          "id": "GR5",
+          "title": "Shortest Path",
+          "problems": [
+            {
+              "id": "LC743",
+              "name": "Network Delay Time",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/network-delay-time/"
+            },
+            {
+              "id": "LC1514",
+              "name": "Path with Maximum Probability",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/path-with-maximum-probability/"
+            },
+            {
+              "id": "LC1631",
+              "name": "Path With Minimum Effort",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/path-with-minimum-effort/"
+            }
+          ]
+        },
+        {
+          "id": "GR6",
+          "title": "Graph Backtracking",
+          "problems": [
+            {
+              "id": "LC797",
+              "name": "All Paths From Source to Target",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/all-paths-from-source-to-target/"
+            },
+            {
+              "id": "LC841",
+              "name": "Keys and Rooms",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/keys-and-rooms/"
+            },
+            {
+              "id": "LC1466",
+              "name": "Reorder Routes to Make All Paths Lead to the City Zero",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC127",
+          "name": "Word Ladder",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/word-ladder/"
+        },
+        {
+          "id": "LC133",
+          "name": "Clone Graph",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/clone-graph/"
+        },
+        {
+          "id": "LC785",
+          "name": "Is Graph Bipartite?",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/is-graph-bipartite/"
+        },
+        {
+          "id": "LC1557",
+          "name": "Minimum Number of Vertices to Reach All Nodes",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/"
+        },
+        {
+          "id": "LC1971",
+          "name": "Find if Path Exists in Graph",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-if-path-exists-in-graph/"
+        },
+        {
+          "id": "LC1129",
+          "name": "Shortest Path with Alternating Colors",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/shortest-path-with-alternating-colors/"
+        },
+        {
+          "id": "LC1584",
+          "name": "Min Cost to Connect All Points",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/"
+        },
+        {
+          "id": "LC269",
+          "name": "Alien Dictionary",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/alien-dictionary/"
+        },
+        {
+          "id": "LC787",
+          "name": "Cheapest Flights Within K Stops",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+        },
+        {
+          "id": "LC778",
+          "name": "Swim in Rising Water",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/swim-in-rising-water/"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Backtracking",
+      "patterns": [
+        {
+          "id": "BT1",
+          "title": "Generate All Combinations",
+          "problems": [
+            {
+              "id": "LC77",
+              "name": "Combinations",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/combinations/"
+            },
+            {
+              "id": "LC78",
+              "name": "Subsets",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/subsets/"
+            },
+            {
+              "id": "LC90",
+              "name": "Subsets II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/subsets-ii/"
+            }
+          ]
+        },
+        {
+          "id": "BT2",
+          "title": "Generate All Permutations",
+          "problems": [
+            {
+              "id": "LC46",
+              "name": "Permutations",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/permutations/"
+            },
+            {
+              "id": "LC47",
+              "name": "Permutations II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/permutations-ii/"
+            },
+            {
+              "id": "LC784",
+              "name": "Letter Case Permutation",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/letter-case-permutation/"
+            }
+          ]
+        },
+        {
+          "id": "BT3",
+          "title": "Combination Sum Pattern",
+          "problems": [
+            {
+              "id": "LC39",
+              "name": "Combination Sum",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/combination-sum/"
+            },
+            {
+              "id": "LC40",
+              "name": "Combination Sum II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/combination-sum-ii/"
+            },
+            {
+              "id": "LC216",
+              "name": "Combination Sum III",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/combination-sum-iii/"
+            }
+          ]
+        },
+        {
+          "id": "BT4",
+          "title": "Constraint-Based Search",
+          "problems": [
+            {
+              "id": "LC51",
+              "name": "N-Queens",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/n-queens/"
+            },
+            {
+              "id": "LC52",
+              "name": "N-Queens II",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/n-queens-ii/"
+            },
+            {
+              "id": "LC37",
+              "name": "Sudoku Solver",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/sudoku-solver/"
+            }
+          ]
+        },
+        {
+          "id": "BT5",
+          "title": "Partitioning & String Backtracking",
+          "problems": [
+            {
+              "id": "LC131",
+              "name": "Palindrome Partitioning",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/palindrome-partitioning/"
+            },
+            {
+              "id": "LC93",
+              "name": "Restore IP Addresses",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/restore-ip-addresses/"
+            },
+            {
+              "id": "LC17",
+              "name": "Letter Combinations of a Phone Number",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC22",
+          "name": "Generate Parentheses",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/generate-parentheses/"
+        },
+        {
+          "id": "LC401",
+          "name": "Binary Watch",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/binary-watch/"
+        },
+        {
+          "id": "LC1079",
+          "name": "Letter Tile Possibilities",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/letter-tile-possibilities/"
+        },
+        {
+          "id": "LC1239",
+          "name": "Maximum Length of a Concatenated String with Unique Characters",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/"
+        },
+        {
+          "id": "LC1415",
+          "name": "The k-th Lexicographical String of All Happy Strings of Length n",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/"
+        },
+        {
+          "id": "LC1593",
+          "name": "Split a String Into the Max Number of Unique Substrings",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/"
+        },
+        {
+          "id": "LC698",
+          "name": "Partition to K Equal Sum Subsets",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets/"
+        },
+        {
+          "id": "LC282",
+          "name": "Expression Add Operators",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/expression-add-operators/"
+        },
+        {
+          "id": "LC996",
+          "name": "Number of Squareful Arrays",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/number-of-squareful-arrays/"
+        },
+        {
+          "id": "LC1723",
+          "name": "Find Minimum Time to Finish All Jobs",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Greedy",
+      "patterns": [
+        {
+          "id": "GD1",
+          "title": "Sorting + Greedy",
+          "problems": [
+            {
+              "id": "LC56",
+              "name": "Merge Intervals",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/merge-intervals/"
+            },
+            {
+              "id": "LC435",
+              "name": "Non-overlapping Intervals",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/non-overlapping-intervals/"
+            },
+            {
+              "id": "LC452",
+              "name": "Minimum Number of Arrows to Burst Balloons",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/"
+            }
+          ]
+        },
+        {
+          "id": "GD2",
+          "title": "Local Optimal Choice",
+          "problems": [
+            {
+              "id": "LC55",
+              "name": "Jump Game",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/jump-game/"
+            },
+            {
+              "id": "LC45",
+              "name": "Jump Game II",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/jump-game-ii/"
+            },
+            {
+              "id": "LC134",
+              "name": "Gas Station",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/gas-station/"
+            }
+          ]
+        },
+        {
+          "id": "GD3",
+          "title": "Greedy with Heap",
+          "problems": [
+            {
+              "id": "LC871",
+              "name": "Minimum Number of Refueling Stops",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/minimum-number-of-refueling-stops/"
+            },
+            {
+              "id": "LC1353",
+              "name": "Maximum Number of Events That Can Be Attended",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/"
+            },
+            {
+              "id": "LC857",
+              "name": "Minimum Cost to Hire K Workers",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/minimum-cost-to-hire-k-workers/"
+            }
+          ]
+        },
+        {
+          "id": "GD4",
+          "title": "String & Array Greedy",
+          "problems": [
+            {
+              "id": "LC763",
+              "name": "Partition Labels",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/partition-labels/"
+            },
+            {
+              "id": "LC316",
+              "name": "Remove Duplicate Letters",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/remove-duplicate-letters/"
+            },
+            {
+              "id": "LC406",
+              "name": "Queue Reconstruction by Height",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/queue-reconstruction-by-height/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC605",
+          "name": "Can Place Flowers",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/can-place-flowers/"
+        },
+        {
+          "id": "LC455",
+          "name": "Assign Cookies",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/assign-cookies/"
+        },
+        {
+          "id": "LC1005",
+          "name": "Maximize Sum Of Array After K Negations",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/"
+        },
+        {
+          "id": "LC860",
+          "name": "Lemonade Change",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/lemonade-change/"
+        },
+        {
+          "id": "LC1710",
+          "name": "Maximum Units on a Truck",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximum-units-on-a-truck/"
+        },
+        {
+          "id": "LC1899",
+          "name": "Merge Triplets to Form Target Triplet",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet/"
+        },
+        {
+          "id": "LC659",
+          "name": "Split Array into Consecutive Subsequences",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/split-array-into-consecutive-subsequences/"
+        },
+        {
+          "id": "LC1665",
+          "name": "Minimum Initial Energy to Finish Tasks",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks/"
+        },
+        {
+          "id": "LC757",
+          "name": "Set Intersection Size At Least Two",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/set-intersection-size-at-least-two/"
+        },
+        {
+          "id": "LC2406",
+          "name": "Divide Intervals Into Minimum Number of Groups",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Dynamic Programming",
+      "patterns": [
+        {
+          "id": "DP1",
+          "title": "1D Dynamic Programming",
+          "problems": [
+            {
+              "id": "LC70",
+              "name": "Climbing Stairs",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/climbing-stairs/"
+            },
+            {
+              "id": "LC198",
+              "name": "House Robber",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/house-robber/"
+            },
+            {
+              "id": "LC746",
+              "name": "Min Cost Climbing Stairs",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/min-cost-climbing-stairs/"
+            }
+          ]
+        },
+        {
+          "id": "DP2",
+          "title": "2D Grid Dynamic Programming",
+          "problems": [
+            {
+              "id": "LC62",
+              "name": "Unique Paths",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/unique-paths/"
+            },
+            {
+              "id": "LC64",
+              "name": "Minimum Path Sum",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/minimum-path-sum/"
+            },
+            {
+              "id": "LC221",
+              "name": "Maximal Square",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximal-square/"
+            }
+          ]
+        },
+        {
+          "id": "DP3",
+          "title": "Knapsack Pattern",
+          "problems": [
+            {
+              "id": "LC416",
+              "name": "Partition Equal Subset Sum",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+            },
+            {
+              "id": "LC494",
+              "name": "Target Sum",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/target-sum/"
+            },
+            {
+              "id": "LC322",
+              "name": "Coin Change",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/coin-change/"
+            }
+          ]
+        },
+        {
+          "id": "DP4",
+          "title": "Longest Subsequence Pattern",
+          "problems": [
+            {
+              "id": "LC300",
+              "name": "Longest Increasing Subsequence",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/longest-increasing-subsequence/"
+            },
+            {
+              "id": "LC1143",
+              "name": "Longest Common Subsequence",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/longest-common-subsequence/"
+            },
+            {
+              "id": "LC72",
+              "name": "Edit Distance",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/edit-distance/"
+            }
+          ]
+        },
+        {
+          "id": "DP5",
+          "title": "Interval & Partition DP",
+          "problems": [
+            {
+              "id": "LC312",
+              "name": "Burst Balloons",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/burst-balloons/"
+            },
+            {
+              "id": "LC516",
+              "name": "Longest Palindromic Subsequence",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/longest-palindromic-subsequence/"
+            },
+            {
+              "id": "LC1312",
+              "name": "Minimum Insertion Steps to Make a String Palindrome",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/"
+            }
+          ]
+        },
+        {
+          "id": "DP6",
+          "title": "Tree Dynamic Programming",
+          "problems": [
+            {
+              "id": "LC337",
+              "name": "House Robber III",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/house-robber-iii/"
+            },
+            {
+              "id": "LC124",
+              "name": "Binary Tree Maximum Path Sum",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+            },
+            {
+              "id": "LC1372",
+              "name": "Longest ZigZag Path in a Binary Tree",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC213",
+          "name": "House Robber II",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/house-robber-ii/"
+        },
+        {
+          "id": "LC279",
+          "name": "Perfect Squares",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/perfect-squares/"
+        },
+        {
+          "id": "LC377",
+          "name": "Combination Sum IV",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/combination-sum-iv/"
+        },
+        {
+          "id": "LC91",
+          "name": "Decode Ways",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/decode-ways/"
+        },
+        {
+          "id": "LC718",
+          "name": "Maximum Length of Repeated Subarray",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/"
+        },
+        {
+          "id": "LC139",
+          "name": "Word Break",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/word-break/"
+        },
+        {
+          "id": "LC10",
+          "name": "Regular Expression Matching",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/regular-expression-matching/"
+        },
+        {
+          "id": "LC44",
+          "name": "Wildcard Matching",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/wildcard-matching/"
+        },
+        {
+          "id": "LC123",
+          "name": "Best Time to Buy and Sell Stock III",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/"
+        },
+        {
+          "id": "LC188",
+          "name": "Best Time to Buy and Sell Stock IV",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Bit Manipulation",
+      "patterns": [
+        {
+          "id": "BM1",
+          "title": "XOR Properties",
+          "problems": [
+            {
+              "id": "LC136",
+              "name": "Single Number",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/single-number/"
+            },
+            {
+              "id": "LC268",
+              "name": "Missing Number",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/missing-number/"
+            },
+            {
+              "id": "LC260",
+              "name": "Single Number III",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/single-number-iii/"
+            }
+          ]
+        },
+        {
+          "id": "BM2",
+          "title": "Bit Masking",
+          "problems": [
+            {
+              "id": "LC191",
+              "name": "Number of 1 Bits",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/number-of-1-bits/"
+            },
+            {
+              "id": "LC338",
+              "name": "Counting Bits",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/counting-bits/"
+            },
+            {
+              "id": "LC190",
+              "name": "Reverse Bits",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/reverse-bits/"
+            }
+          ]
+        },
+        {
+          "id": "BM3",
+          "title": "Bitmask State",
+          "problems": [
+            {
+              "id": "LC78",
+              "name": "Subsets (Bitmask Solution)",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/subsets/"
+            },
+            {
+              "id": "LC1318",
+              "name": "Minimum Flips to Make a OR b Equal to c",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/"
+            },
+            {
+              "id": "LC1239",
+              "name": "Maximum Length of a Concatenated String with Unique Characters",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC476",
+          "name": "Number Complement",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/number-complement/"
+        },
+        {
+          "id": "LC693",
+          "name": "Binary Number with Alternating Bits",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/binary-number-with-alternating-bits/"
+        },
+        {
+          "id": "LC231",
+          "name": "Power of Two",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/power-of-two/"
+        },
+        {
+          "id": "LC342",
+          "name": "Power of Four",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/power-of-four/"
+        },
+        {
+          "id": "LC137",
+          "name": "Single Number II",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/single-number-ii/"
+        },
+        {
+          "id": "LC318",
+          "name": "Maximum Product of Word Lengths",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/maximum-product-of-word-lengths/"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Trie",
+      "patterns": [
+        {
+          "id": "TRI1",
+          "title": "Trie Implementation",
+          "problems": [
+            {
+              "id": "LC208",
+              "name": "Implement Trie (Prefix Tree)",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/implement-trie-prefix-tree/"
+            },
+            {
+              "id": "LC211",
+              "name": "Design Add and Search Words Data Structure",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/"
+            },
+            {
+              "id": "LC1804",
+              "name": "Implement Trie II (Prefix Tree)",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/implement-trie-ii-prefix-tree/"
+            }
+          ]
+        },
+        {
+          "id": "TRI2",
+          "title": "Trie Applications",
+          "problems": [
+            {
+              "id": "LC212",
+              "name": "Word Search II",
+              "difficulty": "Hard",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/word-search-ii/"
+            },
+            {
+              "id": "LC648",
+              "name": "Replace Words",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/replace-words/"
+            },
+            {
+              "id": "LC820",
+              "name": "Short Encoding of Words",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/short-encoding-of-words/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC677",
+          "name": "Map Sum Pairs",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/map-sum-pairs/"
+        },
+        {
+          "id": "LC1268",
+          "name": "Search Suggestions System",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/search-suggestions-system/"
+        },
+        {
+          "id": "LC745",
+          "name": "Prefix and Suffix Search",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/prefix-and-suffix-search/"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Interval Problems",
+      "patterns": [
+        {
+          "id": "INT1",
+          "title": "Merge Intervals",
+          "problems": [
+            {
+              "id": "LC56",
+              "name": "Merge Intervals",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/merge-intervals/"
+            },
+            {
+              "id": "LC57",
+              "name": "Insert Interval",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/insert-interval/"
+            },
+            {
+              "id": "LC435",
+              "name": "Non-overlapping Intervals",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/non-overlapping-intervals/"
+            }
+          ]
+        },
+        {
+          "id": "INT2",
+          "title": "Sweep Line / Events",
+          "problems": [
+            {
+              "id": "LC2406",
+              "name": "Divide Intervals Into Minimum Number of Groups",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/"
+            },
+            {
+              "id": "LC1094",
+              "name": "Car Pooling",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/car-pooling/"
+            },
+            {
+              "id": "LC253",
+              "name": "Meeting Rooms II",
+              "difficulty": "Medium",
+              "platform": "LC Premium",
+              "url": "https://leetcode.com/problems/meeting-rooms-ii/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC986",
+          "name": "Interval List Intersections",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/interval-list-intersections/"
+        },
+        {
+          "id": "LC452",
+          "name": "Minimum Number of Arrows to Burst Balloons",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/"
+        },
+        {
+          "id": "LC759",
+          "name": "Employee Free Time",
+          "difficulty": "Hard",
+          "platform": "LC Premium",
+          "url": "https://leetcode.com/problems/employee-free-time/"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Math & Number Theory",
+      "patterns": [
+        {
+          "id": "MT1",
+          "title": "GCD / LCM",
+          "problems": [
+            {
+              "id": "LC1979",
+              "name": "Find Greatest Common Divisor of Array",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/find-greatest-common-divisor-of-array/"
+            },
+            {
+              "id": "LC1071",
+              "name": "Greatest Common Divisor of Strings",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/greatest-common-divisor-of-strings/"
+            },
+            {
+              "id": "LC365",
+              "name": "Water and Jug Problem",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/water-and-jug-problem/"
+            }
+          ]
+        },
+        {
+          "id": "MT2",
+          "title": "Prime & Modular Arithmetic",
+          "problems": [
+            {
+              "id": "LC204",
+              "name": "Count Primes",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/count-primes/"
+            },
+            {
+              "id": "LC326",
+              "name": "Power of Three",
+              "difficulty": "Easy",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/power-of-three/"
+            },
+            {
+              "id": "LC50",
+              "name": "Pow(x, n)",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/powx-n/"
+            }
+          ]
+        }
+      ],
+      "practice": [
+        {
+          "id": "LC7",
+          "name": "Reverse Integer",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/reverse-integer/"
+        },
+        {
+          "id": "LC9",
+          "name": "Palindrome Number",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/palindrome-number/"
+        },
+        {
+          "id": "LC202",
+          "name": "Happy Number",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/happy-number/"
+        },
+        {
+          "id": "LC166",
+          "name": "Fraction to Recurring Decimal",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/fraction-to-recurring-decimal/"
+        },
+        {
+          "id": "LC592",
+          "name": "Fraction Addition and Subtraction",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/fraction-addition-and-subtraction/"
+        }
+      ]
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "CP1",
+      "name": "Checkpoint 1",
+      "subtitle": "Arrays + HashMap + Two Pointers",
+      "afterModule": 3,
+      "practice": [
+        {
+          "id": "LC3",
+          "name": "Longest Substring Without Repeating Characters",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+        },
+        {
+          "id": "LC76",
+          "name": "Minimum Window Substring",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-window-substring/"
+        },
+        {
+          "id": "LC567",
+          "name": "Permutation in String",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/permutation-in-string/"
+        }
+      ]
+    },
+    {
+      "id": "CP2",
+      "name": "Checkpoint 2",
+      "subtitle": "Sliding Window + Binary Search + Stack + Queue",
+      "afterModule": 7,
+      "practice": [
+        {
+          "id": "LC11",
+          "name": "Container With Most Water",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/container-with-most-water/"
+        },
+        {
+          "id": "LC560",
+          "name": "Subarray Sum Equals K",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/subarray-sum-equals-k/"
+        },
+        {
+          "id": "LC239",
+          "name": "Sliding Window Maximum",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/sliding-window-maximum/"
+        },
+        {
+          "id": "LC875",
+          "name": "Koko Eating Bananas",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/koko-eating-bananas/"
+        },
+        {
+          "id": "LC496",
+          "name": "Next Greater Element I",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/next-greater-element-i/"
+        },
+        {
+          "id": "LC1838",
+          "name": "Frequency of the Most Frequent Element",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/frequency-of-the-most-frequent-element/"
+        },
+        {
+          "id": "LC862",
+          "name": "Shortest Subarray with Sum at Least K",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/"
+        },
+        {
+          "id": "LC844",
+          "name": "Backspace String Compare",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/backspace-string-compare/"
+        },
+        {
+          "id": "LC76",
+          "name": "Minimum Window Substring",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-window-substring/"
+        },
+        {
+          "id": "LC153",
+          "name": "Find Minimum in Rotated Sorted Array",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
+        }
+      ]
+    },
+    {
+      "id": "CP3",
+      "name": "Checkpoint 3",
+      "subtitle": "Linked List + Heap + Trees",
+      "afterModule": 10,
+      "practice": [
+        {
+          "id": "LC25",
+          "name": "Reverse Nodes in k-Group",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
+        },
+        {
+          "id": "LC347",
+          "name": "Top K Frequent Elements",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+        },
+        {
+          "id": "LC236",
+          "name": "Lowest Common Ancestor of a Binary Tree",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+        },
+        {
+          "id": "LC239",
+          "name": "Sliding Window Maximum",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/sliding-window-maximum/"
+        },
+        {
+          "id": "LC875",
+          "name": "Koko Eating Bananas",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/koko-eating-bananas/"
+        },
+        {
+          "id": "LC124",
+          "name": "Binary Tree Maximum Path Sum",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+        },
+        {
+          "id": "LC560",
+          "name": "Subarray Sum Equals K",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/subarray-sum-equals-k/"
+        },
+        {
+          "id": "LC215",
+          "name": "Kth Largest Element in an Array",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+        },
+        {
+          "id": "LC76",
+          "name": "Minimum Window Substring",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-window-substring/"
+        },
+        {
+          "id": "LC543",
+          "name": "Diameter of Binary Tree",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/diameter-of-binary-tree/"
+        }
+      ]
+    },
+    {
+      "id": "CP4",
+      "name": "Final Checkpoint",
+      "subtitle": "Complete DSA Pattern Review",
+      "afterModule": 14,
+      "practice": [
+        {
+          "id": "LC15",
+          "name": "3Sum",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/3sum/"
+        },
+        {
+          "id": "LC76",
+          "name": "Minimum Window Substring",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/minimum-window-substring/"
+        },
+        {
+          "id": "LC239",
+          "name": "Sliding Window Maximum",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/sliding-window-maximum/"
+        },
+        {
+          "id": "LC25",
+          "name": "Reverse Nodes in k-Group",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
+        },
+        {
+          "id": "LC215",
+          "name": "Kth Largest Element in an Array",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+        },
+        {
+          "id": "LC236",
+          "name": "Lowest Common Ancestor of a Binary Tree",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+        },
+        {
+          "id": "LC207",
+          "name": "Course Schedule",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/course-schedule/"
+        },
+        {
+          "id": "LC39",
+          "name": "Combination Sum",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/combination-sum/"
+        },
+        {
+          "id": "LC45",
+          "name": "Jump Game II",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/jump-game-ii/"
+        },
+        {
+          "id": "LC300",
+          "name": "Longest Increasing Subsequence",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/longest-increasing-subsequence/"
+        },
+        {
+          "id": "LC416",
+          "name": "Partition Equal Subset Sum",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+        },
+        {
+          "id": "LC322",
+          "name": "Coin Change",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/coin-change/"
+        },
+        {
+          "id": "LC875",
+          "name": "Koko Eating Bananas",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/koko-eating-bananas/"
+        },
+        {
+          "id": "LC543",
+          "name": "Diameter of Binary Tree",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/diameter-of-binary-tree/"
+        },
+        {
+          "id": "LC560",
+          "name": "Subarray Sum Equals K",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/subarray-sum-equals-k/"
+        },
+        {
+          "id": "LC84",
+          "name": "Largest Rectangle in Histogram",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+        },
+        {
+          "id": "LC295",
+          "name": "Find Median from Data Stream",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/find-median-from-data-stream/"
+        },
+        {
+          "id": "LC743",
+          "name": "Network Delay Time",
+          "difficulty": "Medium",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/network-delay-time/"
+        },
+        {
+          "id": "LC124",
+          "name": "Binary Tree Maximum Path Sum",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+        },
+        {
+          "id": "LC312",
+          "name": "Burst Balloons",
+          "difficulty": "Hard",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/burst-balloons/"
+        }
+      ]
+    }
+  ]
+}
