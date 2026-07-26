@@ -729,9 +729,8 @@ input[type="checkbox"] {
 
 .cloud-actions{
     display:flex;
-    justify-content:center;
-    gap:12px;
-    margin-top:14px;
+    gap:10px;
+    align-items:center;
 }
 
 .cloud-btn{

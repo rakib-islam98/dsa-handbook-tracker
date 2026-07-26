@@ -79,7 +79,8 @@ function updateUserUI() {
     document.getElementById("userEmail").textContent = currentUser.email;
     document.getElementById("userPhoto").src = currentUser.picture;
     document.getElementById("googleLoginBtn").style.display = "none";
-    document.getElementById("syncBtn").style.display = "block";
+    document.getElementById("uploadBtn").style.display = "block";
+    document.getElementById("restoreBtn").style.display = "block";
     document.getElementById("signOutBtn").style.display = "block";
 }
 
@@ -194,33 +195,60 @@ async function updateBackup(fileId) {
 let pendingCloudBackup = null;
 let pendingFileId = null;
 
-async function syncNow() {
+async function uploadNow() {
     try {
         const files = await findBackupFile();
 
         if (files.length === 0) {
+            pendingFileId = null;
+            // NEW CODE
+            document.querySelector("#cloudUploadModal h3").textContent =
+                "☁ Create Cloud Backup";
+            document.querySelector("#cloudUploadModal p").textContent =
+                "Upload your current progress to Google Drive?";
             document.getElementById("cloudUploadModal")
                 .classList.add("show");
             return;
         }
 
+        pendingFileId = files[0].id;
+        // NEW CODE
+        document.querySelector("#cloudUploadModal h3").textContent =
+            "☁ Update Cloud Backup";
+        document.querySelector("#cloudUploadModal p").textContent =
+            "Update your existing cloud backup with your current local progress?";
+        document.getElementById("cloudUploadModal")
+            .classList.add("show");
+    }
+    catch(error){
+        console.error(error);
+        showToast(error.message,"error");
+    }
+}
+
+async function restoreNow() {
+    try {
+        const files = await findBackupFile();
+        if(files.length === 0){
+            showToast("No cloud backup found.");
+            return;
+        }
         const file = files[0];
 
         pendingFileId = file.id;
         pendingCloudBackup = await downloadBackup(file.id);
 
         const localBackup = createBackupObject();
-
         document.getElementById("cloudBackupTime").textContent =
             new Date(file.modifiedTime).toLocaleString();
         document.getElementById("localBackupTime").textContent =
             new Date(localBackup.lastModified).toLocaleString();
-
         document.getElementById("cloudRestoreModal")
-        .classList.add("show");
-    } catch(error) {
+            .classList.add("show");
+    }
+    catch(error){
         console.error(error);
-        showToast(error.message, "error");
+        showToast(error.message,"error");
     }
 }
 
@@ -233,15 +261,20 @@ function signOut() {
         document.getElementById("syncStatus").textContent = "⚪ Not Connected";
         document.getElementById("userInfo").style.display = "none";
         document.getElementById("googleLoginBtn").style.display = "block";
-        document.getElementById("syncBtn").style.display = "none";
+        document.getElementById("uploadBtn").style.display = "none";
+        document.getElementById("restoreBtn").style.display = "none";
         document.getElementById("signOutBtn").style.display = "none";
         showToast("Signed out.");
     });
 }
 
 document
-    .getElementById("syncBtn")
-    .addEventListener("click", syncNow);
+    .getElementById("uploadBtn")
+    .addEventListener("click", uploadNow);
+
+document
+    .getElementById("restoreBtn")
+    .addEventListener("click", restoreNow);
 
 document
     .getElementById("signOutBtn")
