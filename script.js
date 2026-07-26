@@ -798,7 +798,22 @@ function restoreBackupObject(backup) {
   }
   localStorage.setItem("lastModified", backup.lastModified);
   document.getElementById("importFile").value = "";
-  location.reload();
+  refreshUI();
+  showToast("Backup restored successfully.");
+}
+
+//refresh ui after backup restore
+function refreshUI() {
+  renderSidebar();
+  updateDashboard();
+
+  // If user is on Home page
+  if (document.getElementById("homePage").style.display !== "none") {
+      return;
+  }
+  // Otherwise simply go back Home
+  document.getElementById("homePage").style.display = "block";
+  document.getElementById("modulePage").style.display = "none";
 }
 
 document.getElementById("confirmRestore").onclick = () => {

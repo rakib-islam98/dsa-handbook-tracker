@@ -171,38 +171,43 @@
                         </div>
                     </div>
 
-                    <div id="userInfo" class="user-info" style="display:none;">
-                        <img
-                            id="userPhoto"
-                            class="user-photo"
-                            src=""
-                            alt="User">
-
-                        <div>
-                            <div id="userName"></div>
-                            <div id="userEmail"></div>
-                        </div>
-                    </div>
-
                     <button
                         id="googleLoginBtn"
                         class="cloud-btn">
                         Sign in with Google
                     </button>
 
-                    <div class="cloud-actions">
-                        <button
-                            id="uploadBtn"
-                            class="cloud-btn primary"
-                            style="display:none;">
-                            ☁ Upload
-                        </button>
-                        <button
-                            id="restoreBtn"
-                            class="cloud-btn primary"
-                            style="display:none;">
-                            📥 Restore
-                        </button>
+                    <div class="cloud-user-row">
+                        <div id="userInfo" class="user-info" style="display:none;">
+                            <img
+                                id="userPhoto"
+                                class="user-photo"
+                                src=""
+                                alt="User">
+                            <div>
+                                <div id="userName"></div>
+                                <div id="userEmail"></div>
+                            </div>
+                        </div>
+
+                        <div class="cloud-actions">
+                            <button
+                                id="uploadBtn"
+                                class="cloud-btn primary"
+                                style="display:none;">
+                                ☁ Upload
+                            </button>
+
+                            <button
+                                id="restoreBtn"
+                                class="cloud-btn primary"
+                                style="display:none;">
+                                📥 Restore
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cloud-signout">
                         <button
                             id="signOutBtn"
                             class="cloud-btn"
@@ -315,10 +320,6 @@
                     <span><strong>Cloud Backup</strong></span>
                     <span id="cloudBackupTime">--</span>
                 </div>
-                <div class="backup-row">
-                    <span><strong>Current Local</strong></span>
-                    <span id="localBackupTime">--</span>
-                </div>
             </div>
 
             <p>
@@ -339,13 +340,9 @@
 
     <div id="cloudUploadModal" class="modal">
         <div class="confirm-box">
-            <h3>☁ Upload your current progress to Google Drive?</h3>
-            <p>
-                No backup exists in your Google Drive.
-            </p>
-            <p>
-                Upload your current progress to create your first cloud backup.
-            </p>
+            <h3  id="uploadModalTitle"></h3>
+            <p  id="uploadModalMessage"></p>
+
             <div class="confirm-buttons">
                 <button id="cancelCloudUpload">
                     Cancel

@@ -708,7 +708,6 @@ input[type="checkbox"] {
     display:flex;
     align-items:center;
     gap:12px;
-    margin-bottom:16px;
 }
 
 .user-photo{
@@ -729,8 +728,21 @@ input[type="checkbox"] {
 
 .cloud-actions{
     display:flex;
+    flex-direction:column;
     gap:10px;
+}
+
+.cloud-user-row{
+    display:flex;
+    justify-content:space-between;
     align-items:center;
+    margin-top:16px;
+}
+
+.cloud-signout{
+    display:flex;
+    justify-content:center;
+    margin-top:16px;
 }
 
 .cloud-btn{

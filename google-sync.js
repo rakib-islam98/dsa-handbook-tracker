@@ -201,22 +201,26 @@ async function uploadNow() {
 
         if (files.length === 0) {
             pendingFileId = null;
-            // NEW CODE
-            document.querySelector("#cloudUploadModal h3").textContent =
+            // NO BACKUP
+            document.getElementById("uploadModalTitle").textContent =
                 "☁ Create Cloud Backup";
-            document.querySelector("#cloudUploadModal p").textContent =
-                "Upload your current progress to Google Drive?";
+            document.getElementById("uploadModalMessage").textContent =
+                "No cloud backup was found.\n\nUpload your current progress to Google Drive?";
+            document.getElementById("confirmCloudUpload").textContent =
+                "Create Backup";
             document.getElementById("cloudUploadModal")
                 .classList.add("show");
             return;
         }
 
         pendingFileId = files[0].id;
-        // NEW CODE
-        document.querySelector("#cloudUploadModal h3").textContent =
+        // Existing Backup
+        document.getElementById("uploadModalTitle").textContent =
             "☁ Update Cloud Backup";
-        document.querySelector("#cloudUploadModal p").textContent =
-            "Update your existing cloud backup with your current local progress?";
+        document.getElementById("uploadModalMessage").textContent =
+            "Replace the existing cloud backup with your current local progress?";
+        document.getElementById("confirmCloudUpload").textContent =
+            "Update Backup";
         document.getElementById("cloudUploadModal")
             .classList.add("show");
     }
