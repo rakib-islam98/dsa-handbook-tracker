@@ -245,8 +245,6 @@ async function restoreNow() {
         const localBackup = createBackupObject();
         document.getElementById("cloudBackupTime").textContent =
             new Date(file.modifiedTime).toLocaleString();
-        document.getElementById("localBackupTime").textContent =
-            new Date(localBackup.lastModified).toLocaleString();
         document.getElementById("cloudRestoreModal")
             .classList.add("show");
     }
@@ -263,6 +261,7 @@ function signOut() {
         accessToken = null;
         currentUser = null;
         document.getElementById("syncStatus").textContent = "⚪ Not Connected";
+        document.getElementById("syncStatus").style.color = "white";
         document.getElementById("userInfo").style.display = "none";
         document.getElementById("googleLoginBtn").style.display = "block";
         document.getElementById("uploadBtn").style.display = "none";

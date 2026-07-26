@@ -310,6 +310,8 @@ function renderSidebar() {
 }
 
 function show(m) {
+  sidebar.classList.remove("open");
+  overlay.classList.remove("show");
   document.getElementById("homePage").style.display = "none";
   document.getElementById("modulePage").style.display = "block";
 
@@ -823,4 +825,18 @@ document.getElementById("confirmRestore").onclick = () => {
   const backup = pendingBackup;
   pendingBackup = null;
   restoreBackupObject(backup);
+};
+
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("moduleList");
+const overlay = document.getElementById("sidebarOverlay");
+
+menuBtn.onclick = () => {
+    sidebar.classList.toggle("open");
+    overlay.classList.toggle("show");
+};
+
+overlay.onclick = () => {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("show");
 };

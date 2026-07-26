@@ -19,6 +19,64 @@ body {
    HEADER
 =========================== */
 
+.topbar-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.mobile-title{
+    display:none;
+}
+
+.mobile-text{
+    display:none;
+}
+
+@media (max-width:768px){
+    .desktop-title{
+        display:none;
+    }
+
+    .mobile-title{
+        display:inline;
+    }
+
+    .desktop-text{
+        display:none;
+    }
+
+    .mobile-text{
+        display:inline;
+    }
+
+    .topbar-actions{
+        gap:8px;
+    }
+
+    .menu-btn,
+    .home-btn{
+        width:42px;
+        height:42px;
+        padding:0;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+}
+
+.menu-btn{
+    display:none;
+    background:#353535;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
 h2 {
     margin-bottom: 20px;
 }
@@ -664,8 +722,12 @@ input[type="checkbox"] {
 }
 
 /* ===========================
-   CLOUD SYNC
+   CLOUD BACKUP
 =========================== */
+
+#googleLoginBtn {
+    margin-bottom: 16px;
+}
 
 #syncStatus{
     color:white;
@@ -673,20 +735,31 @@ input[type="checkbox"] {
 }
 
 .cloud-sync-card{
-    background: #2d2d2d;
-    border: 1px solid #444;
-    color: white;
+    background:#2d2d2d;
+    border:1px solid #444;
+    color:white;
     border-radius:14px;
     padding:18px 22px;
     margin-top:20px;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
+.cloud-layout{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+}
+
+.cloud-left{
+    flex:1;
+}
+
 .cloud-header{
     display:flex;
     align-items:center;
     gap:12px;
-    margin-bottom:16px;
+    margin-bottom:18px;
 }
 
 .cloud-icon{
@@ -711,14 +784,15 @@ input[type="checkbox"] {
 }
 
 .user-photo{
-    width:36px;
-    height:36px;
+    width:42px;
+    height:42px;
     border-radius:50%;
     object-fit:cover;
 }
 
 #userName{
     font-weight:600;
+    font-size:20px;
 }
 
 #userEmail{
@@ -729,32 +803,15 @@ input[type="checkbox"] {
 .cloud-actions{
     display:flex;
     flex-direction:column;
-    gap:10px;
-}
-
-.cloud-user-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:16px;
-}
-
-.cloud-signout{
-    display:flex;
-    justify-content:center;
-    margin-top:16px;
 }
 
 .cloud-btn{
-    width:170px;
-    margin:0;
-    display:block;
+    width:210px;
     padding:12px;
     border:none;
     border-radius:8px;
     cursor:pointer;
     font-size:15px;
-    margin-top:2px;
     transition:.2s;
 }
 
@@ -765,11 +822,55 @@ input[type="checkbox"] {
 .cloud-btn.primary{
     background:#1976d2;
     color:white;
+    margin-bottom: 16px;
 }
 
 .cloud-btn:not(.primary){
     background:#f1f3f4;
 }
+
+.cloud-signout{
+    display:flex;
+    justify-content:center;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width: 768px){
+    .cloud-layout{
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .cloud-left{
+        width: 100%;
+    }
+
+    .cloud-actions{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cloud-btn{
+        width:180px;
+    }
+
+    .cloud-btn{
+        width: 100%;
+    }
+
+    .cloud-sync-card{
+        margin-top:16px;
+    }
+
+    .cloud-signout .cloud-btn{
+        width: 180px;
+    }
+}
+
+/*Dashboard*/
 
 .difficulty-row{
     display:flex;
@@ -897,4 +998,76 @@ input[type="checkbox"] {
 
 .backup-row:not(:last-child){
     border-bottom:1px solid #3a3a3a;
+}
+
+/* ===========================
+   MOBILE DRAWER
+=========================== */
+
+#sidebarOverlay{
+    display:none;
+}
+
+@media (max-width:768px){
+    .menu-btn{
+        display:block;
+    }
+
+    #moduleContent{
+        padding:16px;
+    }
+
+    .moduleButton{
+        padding:12px;
+        font-size:15px;
+    }
+
+    #moduleList{
+        position:fixed;
+        left:-240px;
+        top:70px;
+        width:240px;
+        height:calc(100vh - 70px);
+        z-index:1000;
+        transition:left .28s cubic-bezier(.22,.61,.36,1);
+    }
+
+    #moduleList.open{
+        left:0;
+    }
+
+    #sidebarOverlay{
+        display:block;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.45);
+        backdrop-filter:blur(3px);
+        opacity:0;
+        pointer-events:none;
+        transition:.3s;
+        z-index:999;
+    }
+
+    #sidebarOverlay.show{
+        opacity:1;
+        pointer-events:auto;
+    }
+
+    #moduleContent{
+        width:100%;
+        flex:1;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-card{
+        padding:18px;
+    }
+
+    .footer{
+        font-size:12px;
+        padding:14px;
+    }
 }

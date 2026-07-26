@@ -22,15 +22,29 @@
     <!-- ================= HEADER ================= -->
 
     <header class="topbar">
-        <h1>🚀 DSA Handbook Tracker</h1>
-
-        <button id="homeBtn" class="home-btn">
-            🏠 Home
-        </button>
+        <h1>
+            <span class="desktop-title">
+                🚀 DSA Handbook Tracker
+            </span>
+            <span class="mobile-title">
+                🚀 DSA Tracker
+            </span>
+        </h1>
+        <div class="topbar-actions">
+            <button id="menuBtn" class="menu-btn">
+                <span class="desktop-text">☰ Modules</span>
+                <span class="mobile-text">☰</span>
+            </button>
+            <button id="homeBtn" class="home-btn">
+                <span class="desktop-text">🏠 Home</span>
+                <span class="mobile-text">🏠</span>
+            </button>
+        </div>
     </header>
 
     <!-- ================= MAIN LAYOUT ================= -->
 
+    <div id="sidebarOverlay"></div>
     <div id="dashboard">
 
         <!-- Sidebar -->
@@ -152,44 +166,46 @@
                 ============================ -->
 
                 <div class="cloud-sync-card">
-                    <div class="cloud-header">
-                        <span class="cloud-icon">☁</span>
-                        <div>
-                            <h3>
-                                Cloud Backup
-                                    <span 
-                                    title="Useful for backing up data and syncing progress seamlessly across multiple devices." 
-                                    style="background-color: #007bff; color: #ffffff; border: none; border-radius: 50%; width: 16px; height: 16px; padding: 0; font-size: 11px; font-weight: bold; font-family: 'Georgia', serif; font-style: italic; margin-left: 6px; vertical-align: middle; display: inline-flex; align-items: center; justify-content: center;">
-                                    i
-                                    </span>
-                            </h3>
-                            <!-- Minimal HTML native tooltip icon button -->
-                            
-                            <p id="syncStatus">
-                                ⚪ Not Connected
-                            </p>
-                        </div>
-                    </div>
-
                     <button
                         id="googleLoginBtn"
                         class="cloud-btn">
                         Sign in with Google
                     </button>
 
-                    <div class="cloud-user-row">
-                        <div id="userInfo" class="user-info" style="display:none;">
-                            <img
-                                id="userPhoto"
-                                class="user-photo"
-                                src=""
-                                alt="User">
-                            <div>
-                                <div id="userName"></div>
-                                <div id="userEmail"></div>
+                    <div class="cloud-layout">
+                        <!-- LEFT SIDE -->
+                        <div class="cloud-left">
+                            <div class="cloud-header">
+                                <span class="cloud-icon">☁</span>
+                                <div>
+                                    <h3>
+                                        Cloud Backup
+                                        <span
+                                            title="Useful for backing up data and syncing progress seamlessly across multiple devices."
+                                            style="background:#007bff;color:#fff;border:none;border-radius:50%;width:16px;height:16px;padding:0;font-size:11px;font-weight:bold;font-family:'Georgia',serif;font-style:italic;margin-left:6px;vertical-align:middle;display:inline-flex;align-items:center;justify-content:center;">
+                                            i
+                                        </span>
+                                    </h3>
+                                    <p id="syncStatus">
+                                        ⚪ Not Connected
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div id="userInfo" class="user-info" style="display:none;">
+                                <img
+                                    id="userPhoto"
+                                    class="user-photo"
+                                    src=""
+                                    alt="User">
+                                <div>
+                                    <div id="userName"></div>
+                                    <div id="userEmail"></div>
+                                </div>
                             </div>
                         </div>
 
+                        <!-- RIGHT SIDE -->
                         <div class="cloud-actions">
                             <button
                                 id="uploadBtn"
@@ -197,7 +213,6 @@
                                 style="display:none;">
                                 ☁ Upload
                             </button>
-
                             <button
                                 id="restoreBtn"
                                 class="cloud-btn primary"
