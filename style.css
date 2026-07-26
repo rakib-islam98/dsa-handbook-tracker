@@ -97,6 +97,9 @@ h3 {
     align-items: center;
     padding: 0 25px;
     border-bottom: 1px solid #444;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
 }
 
 .topbar h1 {
@@ -167,6 +170,15 @@ h3 {
     float: right;
     color: #dddddd;
     font-size: 13px;
+}
+
+.moduleCompleted{
+    border:1px solid #2ecc71;
+    background:#1f3b2a;
+}
+
+.moduleCompleted:hover{
+    background:#295337;
 }
 
 /* ===========================
@@ -316,6 +328,11 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+.checkpointCompleted{
+    border:1px solid #9b6dff;
+    background:#3a2c5d;
+}
+
 /* ===========================
    NOTES BUTTON
 =========================== */
@@ -443,9 +460,30 @@ input[type="checkbox"] {
     margin: 8px 0;
 }
 
-.problem-name {
-    flex: 1;
+.problem-content{
+    flex:1;
 }
+
+.problem-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+}
+
+.problem-bottom{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:8px;
+}
+
+.problem-name{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
 
 .tag {
     padding: 3px 10px;
@@ -1023,13 +1061,16 @@ input[type="checkbox"] {
     }
 
     #moduleList{
-        position:fixed;
-        left:-240px;
-        top:70px;
-        width:240px;
-        height:calc(100vh - 70px);
-        z-index:1000;
-        transition:left .28s cubic-bezier(.22,.61,.36,1);
+        position: fixed;
+        top: 0;
+        left: -240px;
+        width: 240px;
+        height: 100dvh;
+        padding-top: 72px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 1050;
+        transition: left .28s cubic-bezier(.22,.61,.36,1);
     }
 
     #moduleList.open{
@@ -1069,5 +1110,57 @@ input[type="checkbox"] {
     .footer{
         font-size:12px;
         padding:14px;
+    }
+
+    /* ===========================
+    MOBILE PROBLEM ROW
+    =========================== */
+
+    .problem-id{
+        display:none;
+    }
+
+    .problem-row{
+        display:flex;
+        align-items:flex-start;
+        gap:12px;
+        padding:12px 0;
+    }
+
+    .problem-row input{
+        margin-top:4px;
+        flex-shrink:0;
+    }
+
+    .problem-content{
+        flex:1;
+    }
+
+    .problem-top{
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .problem-bottom{
+        display:flex;
+        align-items:center;
+        gap:14px;
+        margin-top:10px;
+    }
+
+    .problem-name{
+        flex:1;
+    }
+
+    .platform-logo{
+        width:60px;
+        height:22px;
+    }
+
+    .tag{
+        padding:4px 10px;
+        font-size:12px;
     }
 }

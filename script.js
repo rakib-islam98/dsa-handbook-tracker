@@ -288,7 +288,15 @@ function renderSidebar() {
     // ---------- Module ----------
     const b = document.createElement("button");
     b.className = "moduleButton";
-    b.innerHTML = `📦 ${m.name}<span class='percent'>${percent(m)}%</span>`;
+    if(percent(m) === 100){
+        b.classList.add("moduleCompleted");
+    }
+    const icon = percent(m) === 100 ? "✅" : "📦";
+    b.innerHTML =
+      `${icon} ${m.name}
+      <span class='percent'>
+      ${percent(m)}%
+      </span>`;
     b.onclick = () => show(m);
     l.appendChild(b);
 
@@ -298,8 +306,15 @@ function renderSidebar() {
       .forEach((cp) => {
         const cpBtn = document.createElement("button");
         cpBtn.className = "moduleButton checkpointButton";
+        if(checkpointPercent(cp) === 100){
+          cpBtn.classList.add("checkpointCompleted");
+        }
+        const cpIcon =
+          checkpointPercent(cp) === 100
+          ? "🏆"
+          : "🏁";
         cpBtn.innerHTML =
-          `🏁 ${cp.name}
+          `${cpIcon} ${cp.name}
           <span class="percent">
               ${checkpointPercent(cp)}%
           </span>`;
@@ -356,20 +371,32 @@ function show(m) {
     p.problems.forEach((x) => {
       h += `
 <div class="problem-row">
-<label class="problem-name">
 
 <input id="c_${m.id}_${p.id}_${x.id}" type="checkbox">
-${x.id}: ${x.name}
-</label>
+
+<div class="problem-content">
+
+<div class="problem-top">
+
+<div class="problem-name">
+
+<span class="problem-id">
+${x.id}:
+</span>
+
+<span class="problem-title">
+${x.name}
+</span>
+
+</div>
 
 <span class="tag ${x.difficulty.toLowerCase()}">
 ${x.difficulty}
 </span>
 
-<img
-  class="platform-logo"
-  src="logos/${platformLogo[x.platform]}"
-  title="${x.platform}">
+</div>
+
+<div class="problem-bottom">
 
 <span
 class="problem-note"
@@ -381,13 +408,21 @@ onclick="openNote(
 📝
 </span>
 
+<img
+class="platform-logo"
+src="logos/${platformLogo[x.platform]}"
+title="${x.platform}">
+
 <a
 href="${x.url}"
 target="_blank"
-class="open-link"
-title="Open Problem">
+class="open-link">
 🔗
 </a>
+
+</div>
+
+</div>
 
 </div>
   `;
@@ -400,14 +435,33 @@ title="Open Problem">
   h += `<div class='practice'><h3>Practice Problems</h3>`;
   m.practice.forEach((x) => {
     h += `
-    <div class="problem-row">
-      <input id="p_${m.id}_${x.id}" type="checkbox">
-      <span class="problem-name">${x.id}: ${x.name}</span>
-      <span class="tag ${x.difficulty.toLowerCase()}">${x.difficulty}</span>
-      <img
-    class="platform-logo"
-    src="logos/${platformLogo[x.platform]}"
-    title="${x.platform}">
+<div class="problem-row">
+
+<input id="p_${m.id}_${x.id}" type="checkbox">
+
+<div class="problem-content">
+
+<div class="problem-top">
+
+<div class="problem-name">
+
+<span class="problem-id">
+${x.id}:
+</span>
+
+<span class="problem-title">
+${x.name}
+</span>
+
+</div>
+
+<span class="tag ${x.difficulty.toLowerCase()}">
+${x.difficulty}
+</span>
+
+</div>
+
+<div class="problem-bottom">
 
 <span
 class="problem-note"
@@ -419,14 +473,23 @@ onclick="openNote(
 📝
 </span>
 
+<img
+class="platform-logo"
+src="logos/${platformLogo[x.platform]}"
+title="${x.platform}">
+
 <a
 href="${x.url}"
 target="_blank"
-class="open-link"
-title="Open Problem">
+class="open-link">
 🔗
 </a>
-    </div>
+
+</div>
+
+</div>
+
+</div>
   `;
   });
 
@@ -497,40 +560,61 @@ function showCheckpoint(cp) {
 
   cp.practice.forEach((x) => {
     h += `
-            <div class="problem-row">
-                <input
-                    id="cp_${cp.id}_${x.id}"
-                    type="checkbox">
+<div class="problem-row">
 
-                <span class="problem-name">
-                    ${x.id}: ${x.name}
-                </span>
+<input id="cp_${cp.id}_${x.id}" type="checkbox">
 
-                <span class="tag ${x.difficulty.toLowerCase()}">
-                    ${x.difficulty}
-                </span>
+<div class="problem-content">
 
-                <img
-                    class="platform-logo"
-                    src="logos/${platformLogo[x.platform]}"
-                    title="${x.platform}">
+<div class="problem-top">
 
-                <span
-                    class="problem-note"
-                    onclick="openNote(
-                        '${kProblemNote(x.id)}',
-                        '${x.name}'
-                    )">
-                    📝
-                </span>
+<div class="problem-name">
 
-                <a
-                    href="${x.url}"
-                    target="_blank"
-                    class="open-link">
-                    🔗
-                </a>
-            </div>
+<span class="problem-id">
+${x.id}:
+</span>
+
+<span class="problem-title">
+${x.name}
+</span>
+
+</div>
+
+<span class="tag ${x.difficulty.toLowerCase()}">
+${x.difficulty}
+</span>
+
+</div>
+
+<div class="problem-bottom">
+
+<span
+class="problem-note"
+title="Problem Notes"
+onclick="openNote(
+'${kProblemNote(x.id)}',
+'${x.name}'
+)">
+📝
+</span>
+
+<img
+class="platform-logo"
+src="logos/${platformLogo[x.platform]}"
+title="${x.platform}">
+
+<a
+href="${x.url}"
+target="_blank"
+class="open-link">
+🔗
+</a>
+
+</div>
+
+</div>
+
+</div>
         `;
   });
 
