@@ -20,9 +20,9 @@ const BACKUP_KEYS = [
   "problem_note_",
   "streak_",
 ];
-
+const APP_VERSION = "1.0.1";
 let pendingBackup = null;
-fetch("roadmap.json")
+fetch(`roadmap.json?v=${APP_VERSION}`)
   .then((r) => r.json())
   .then((d) => {
     modules = d.modules;
