@@ -367,6 +367,13 @@ input[type="checkbox"] {
    MODAL
 =========================== */
 
+@media (max-width:768px){
+    .modal-content{
+        width:95%;
+        height:90vh;
+    }
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -409,17 +416,15 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-#noteEditor {
-    flex:1;
-    margin:20px;
-}
-
 .modal-footer{
-    padding:18px 24px;
+    flex-shrink:0;
     display:flex;
     justify-content:flex-end;
+    align-items:center;
     gap:12px;
-    margin-top:auto;
+
+    padding:12px 20px;
+
     background:#363636;
     border-top:1px solid #555;
 }
@@ -445,7 +450,6 @@ input[type="checkbox"] {
     border-radius: 8px;
     cursor: pointer;
     transition: .25s;
-    margin-right: 10px;
 }
 
 #editNoteBtn:hover {
@@ -591,36 +595,59 @@ input[type="checkbox"] {
 
 #noteEditor{
     flex:1;
+    min-height:0;
+    display:flex;
+    flex-direction:column;
     margin:20px;
+    overflow:hidden;
 }
 
+/* Toolbar */
+
 .ql-toolbar.ql-snow{
+    flex-shrink:0;
     background:#2f2f2f;
     border:1px solid #555 !important;
     border-bottom:none !important;
     border-radius:10px 10px 0 0;
 }
 
+/* Editor Container */
+
 .ql-container.ql-snow{
     flex:1;
+    min-height:0;
+
     display:flex;
     flex-direction:column;
+
+    overflow:hidden;
+
     background:#1f1f1f;
     color:white;
+
     border:1px solid #555 !important;
     border-radius:0 0 10px 10px;
 }
 
+/* Editor */
+
 .ql-editor{
     flex:1;
+    overflow-y:auto;
+
     color:white;
     font-size:15px;
     line-height:1.8;
 }
 
+/* Read-only mode */
+
 .ql-container.ql-disabled{
     background:#1f1f1f;
 }
+
+/* Placeholder */
 
 .ql-editor.ql-blank::before{
     color:#777;
