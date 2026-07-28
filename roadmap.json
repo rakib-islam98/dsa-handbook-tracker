@@ -21,13 +21,6 @@
               "difficulty": "Easy",
               "platform": "LC",
               "url": "https://leetcode.com/problems/maximum-difference-between-increasing-elements/"
-            },
-            {
-              "id": "LC152",
-              "name": "Maximum Product Subarray",
-              "difficulty": "Medium",
-              "platform": "LC",
-              "url": "https://leetcode.com/problems/maximum-product-subarray/"
             }
           ]
         },
@@ -2123,7 +2116,7 @@
         },
         {
           "id": "GR6",
-          "title": "Graph Backtracking",
+          "title": "DFS on Graphs",
           "problems": [
             {
               "id": "LC797",
@@ -2649,6 +2642,13 @@
               "difficulty": "Easy",
               "platform": "LC",
               "url": "https://leetcode.com/problems/min-cost-climbing-stairs/"
+            },
+                        {
+              "id": "LC152",
+              "name": "Maximum Product Subarray",
+              "difficulty": "Medium",
+              "platform": "LC",
+              "url": "https://leetcode.com/problems/maximum-product-subarray/"
             }
           ]
         },
@@ -3264,25 +3264,25 @@
       "afterModule": 3,
       "practice": [
         {
-          "id": "LC3",
-          "name": "Longest Substring Without Repeating Characters",
-          "difficulty": "Medium",
+          "id": "LC1",
+          "name": "Two Sum",
+          "difficulty": "Easy",
           "platform": "LC",
-          "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+          "url": "https://leetcode.com/problems/two-sum/"
         },
         {
-          "id": "LC76",
-          "name": "Minimum Window Substring",
-          "difficulty": "Hard",
-          "platform": "LC",
-          "url": "https://leetcode.com/problems/minimum-window-substring/"
-        },
-        {
-          "id": "LC567",
-          "name": "Permutation in String",
+          "id": "LC15",
+          "name": "3Sum",
           "difficulty": "Medium",
           "platform": "LC",
-          "url": "https://leetcode.com/problems/permutation-in-string/"
+          "url": "https://leetcode.com/problems/3sum/"
+        },
+        {
+          "id": "LC217",
+          "name": "Contains Duplicate",
+          "difficulty": "Easy",
+          "platform": "LC",
+          "url": "https://leetcode.com/problems/contains-duplicate/"
         }
       ]
     },
@@ -3446,7 +3446,7 @@
       "id": "CP4",
       "name": "Final Checkpoint",
       "subtitle": "Complete DSA Pattern Review",
-      "afterModule": 14,
+      "afterModule": 18,
       "practice": [
         {
           "id": "LC15",
