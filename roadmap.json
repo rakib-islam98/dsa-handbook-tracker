@@ -473,7 +473,7 @@
         },
         {
           "id": "TP2",
-          "title": "Same Direction (Fast & Slow)",
+          "title": "Same Direction — Read/Write Pointers",
           "problems": [
             {
               "id": "LC27",

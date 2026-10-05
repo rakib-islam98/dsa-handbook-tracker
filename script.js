@@ -96,10 +96,27 @@ function showToast(message, type = "success") {
   }, 3000);
 }
 
+function getLocalDateKey(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+}
+
 function updateStreak() {
-  const today = new Date().toISOString().split("T")[0];
-  let current = parseInt(localStorage.getItem(STREAK_CURRENT) || "0");
-  let best = parseInt(localStorage.getItem(STREAK_BEST) || "0");
+  const today = getLocalDateKey();
+
+  let current = parseInt(
+    localStorage.getItem(STREAK_CURRENT) || "0",
+    10
+  );
+
+  let best = parseInt(
+    localStorage.getItem(STREAK_BEST) || "0",
+    10
+  );
+
   const lastDate = localStorage.getItem(STREAK_LAST_DATE);
 
   // Already counted today
@@ -110,9 +127,9 @@ function updateStreak() {
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
 
-  const yesterdayStr = yesterday.toISOString().split("T")[0];
+  const yesterdayKey = getLocalDateKey(yesterday);
 
-  if (lastDate === yesterdayStr) {
+  if (lastDate === yesterdayKey) {
     current++;
   } else {
     current = 1;
@@ -125,11 +142,32 @@ function updateStreak() {
   localStorage.setItem(STREAK_LAST_DATE, today);
 }
 
+function refreshStreakStatus() {
+  const lastDate = localStorage.getItem(STREAK_LAST_DATE);
+
+  if (!lastDate) {
+    return;
+  }
+
+  const today = getLocalDateKey();
+
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+
+  const yesterdayKey = getLocalDateKey(yesterday);
+
+  if (lastDate !== today && lastDate !== yesterdayKey) {
+    localStorage.setItem(STREAK_CURRENT, "0");
+  }
+}
+
 // ============================
 // DASHBOARD
 // ============================
 
 function updateDashboard() {
+  refreshStreakStatus();
+
   let totalProblems = 0;
   let solvedProblems = 0;
   let completedModules = 0;
@@ -357,7 +395,7 @@ function show(m) {
         onclick="event.stopPropagation();
                   openNote(
                   '${kPatternNote(p.id)}',
-                  '${p.title}'
+                  ${JSON.stringify(p.title).replace(/"/g, '&quot;')}
                   )">
         📝 Notes
     </button>
@@ -593,7 +631,7 @@ class="problem-note"
 title="Problem Notes"
 onclick="openNote(
 '${kProblemNote(x.id)}',
-'${x.name}'
+${JSON.stringify(x.name).replace(/"/g, '&quot;')}
 )">
 📝
 </span>
