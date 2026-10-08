@@ -107,15 +107,9 @@ function getLocalDateKey(date = new Date()) {
 function updateStreak() {
   const today = getLocalDateKey();
 
-  let current = parseInt(
-    localStorage.getItem(STREAK_CURRENT) || "0",
-    10
-  );
+  let current = parseInt(localStorage.getItem(STREAK_CURRENT) || "0", 10);
 
-  let best = parseInt(
-    localStorage.getItem(STREAK_BEST) || "0",
-    10
-  );
+  let best = parseInt(localStorage.getItem(STREAK_BEST) || "0", 10);
 
   const lastDate = localStorage.getItem(STREAK_LAST_DATE);
 
@@ -250,29 +244,26 @@ function updateDashboard() {
 
   checkpoints.forEach((cp) => {
     cp.practice.forEach((x) => {
-        const solved =
-            localStorage.getItem(
-                kCP(cp.id, x.id)
-            ) === "true";
+      const solved = localStorage.getItem(kCP(cp.id, x.id)) === "true";
 
-        switch (x.difficulty) {
-            case "Easy":
-                easyTotal++;
-                if (solved) easySolved++;
-                break;
-            case "Medium":
-                mediumTotal++;
-                if (solved) mediumSolved++;
-                break;
-            case "Hard":
-                hardTotal++;
-                if (solved) hardSolved++;
-                break;
-        }
-        totalProblems++;
-        if (solved) {
-            solvedProblems++;
-        }
+      switch (x.difficulty) {
+        case "Easy":
+          easyTotal++;
+          if (solved) easySolved++;
+          break;
+        case "Medium":
+          mediumTotal++;
+          if (solved) mediumSolved++;
+          break;
+        case "Hard":
+          hardTotal++;
+          if (solved) hardSolved++;
+          break;
+      }
+      totalProblems++;
+      if (solved) {
+        solvedProblems++;
+      }
     });
   });
 
@@ -280,12 +271,12 @@ function updateDashboard() {
     let solved = 0;
     const total = cp.practice.length;
     cp.practice.forEach((x) => {
-        if (localStorage.getItem(kCP(cp.id, x.id)) === "true") {
-            solved++;
-        }
+      if (localStorage.getItem(kCP(cp.id, x.id)) === "true") {
+        solved++;
+      }
     });
     if (solved === total && total > 0) {
-        completedCheckpoints++;
+      completedCheckpoints++;
     }
   });
 
@@ -296,7 +287,8 @@ function updateDashboard() {
 
   document.getElementById("overallProgressBar").style.width = percent + "%";
   document.getElementById("overallProgressText").innerText = percent + "%";
-  document.getElementById("overallSolvedText").innerText = solvedProblems + " / " + totalProblems + " Problems";
+  document.getElementById("overallSolvedText").innerText =
+    solvedProblems + " / " + totalProblems + " Problems";
   document.getElementById("moduleCompletedText").innerHTML = `
   <div class="completion-row">
     <span>📦 Modules</span>
@@ -308,9 +300,12 @@ function updateDashboard() {
       <span>${completedCheckpoints} / ${checkpoints.length}</span>
   </div>
                                                             `;
-  document.getElementById("easyCount").innerText = `${easySolved} / ${easyTotal}`;
-  document.getElementById("mediumCount").innerText = `${mediumSolved} / ${mediumTotal}`;
-  document.getElementById("hardCount").innerText = `${hardSolved} / ${hardTotal}`;
+  document.getElementById("easyCount").innerText =
+    `${easySolved} / ${easyTotal}`;
+  document.getElementById("mediumCount").innerText =
+    `${mediumSolved} / ${mediumTotal}`;
+  document.getElementById("hardCount").innerText =
+    `${hardSolved} / ${hardTotal}`;
 
   const current = localStorage.getItem(STREAK_CURRENT) || "0";
   const best = localStorage.getItem(STREAK_BEST) || "0";
@@ -326,12 +321,11 @@ function renderSidebar() {
     // ---------- Module ----------
     const b = document.createElement("button");
     b.className = "moduleButton";
-    if(percent(m) === 100){
-        b.classList.add("moduleCompleted");
+    if (percent(m) === 100) {
+      b.classList.add("moduleCompleted");
     }
     const icon = percent(m) === 100 ? "✅" : "📦";
-    b.innerHTML =
-      `${icon} ${m.name}
+    b.innerHTML = `${icon} ${m.name}
       <span class='percent'>
       ${percent(m)}%
       </span>`;
@@ -344,15 +338,11 @@ function renderSidebar() {
       .forEach((cp) => {
         const cpBtn = document.createElement("button");
         cpBtn.className = "moduleButton checkpointButton";
-        if(checkpointPercent(cp) === 100){
+        if (checkpointPercent(cp) === 100) {
           cpBtn.classList.add("checkpointCompleted");
         }
-        const cpIcon =
-          checkpointPercent(cp) === 100
-          ? "🏆"
-          : "🏁";
-        cpBtn.innerHTML =
-          `${cpIcon} ${cp.name}
+        const cpIcon = checkpointPercent(cp) === 100 ? "🏆" : "🏁";
+        cpBtn.innerHTML = `${cpIcon} ${cp.name}
           <span class="percent">
               ${checkpointPercent(cp)}%
           </span>`;
@@ -374,33 +364,43 @@ function show(m) {
     h += `
           <div class="pattern">
 
-              <div class="pattern-header">
+            <div class="pattern-header">
 
-    <div class="pattern-left"
-         onclick="togglePattern('${p.id}')">
+              <div class="pattern-left"
+                  onclick="togglePattern('${p.id}')">
 
-        <span id="arrow_${p.id}" class="arrow">▼</span>
+                  <span id="arrow_${p.id}" class="arrow">▼</span>
 
-        <h4 class="pattern-title">
-            ${p.id}: ${p.title}
-            <span id="count_${p.id}" class="pattern-count">
-              (${patternProgress(m, p)})
-            </span>
-        </h4>
+                  <h4 class="pattern-title">
+                      ${p.id}: ${p.title}
+                      <span id="count_${p.id}" class="pattern-count">
+                        (${patternProgress(m, p)})
+                      </span>
+                  </h4>
 
-    </div>
+              </div>
 
-    <button
-        class="noteBtn"
-        onclick="event.stopPropagation();
-                  openNote(
-                  '${kPatternNote(p.id)}',
-                  ${JSON.stringify(p.title).replace(/"/g, '&quot;')}
-                  )">
-        📝 Notes
-    </button>
+              <div class="pattern-actions">
 
-</div>
+                <button class="learnPatternBtn"
+                  type="button"
+                  onclick="event.stopPropagation(); openPatternGuide('${p.id}')">
+                  📖 Learn Pattern
+                </button>
+
+                <button class="noteBtn"
+                  type="button"
+                  onclick="event.stopPropagation();
+                            openNote(
+                            '${kPatternNote(p.id)}',
+                            ${JSON.stringify(p.title).replace(/"/g, "&quot;")}
+                            )">
+                  📝 Notes
+                </button>
+
+              </div>
+
+            </div>
 
 <div
     class="pattern-body"
@@ -631,7 +631,7 @@ class="problem-note"
 title="Problem Notes"
 onclick="openNote(
 '${kProblemNote(x.id)}',
-${JSON.stringify(x.name).replace(/"/g, '&quot;')}
+${JSON.stringify(x.name).replace(/"/g, "&quot;")}
 )">
 📝
 </span>
@@ -682,19 +682,194 @@ function checkpointPercent(cp) {
   let solved = 0;
   const total = cp.practice.length;
 
-  cp.practice.forEach(x => {
-      if (localStorage.getItem(kCP(cp.id, x.id)) === "true")
-          solved++;
+  cp.practice.forEach((x) => {
+    if (localStorage.getItem(kCP(cp.id, x.id)) === "true") solved++;
   });
 
-  return total
-      ? Math.round((solved * 100) / total)
-      : 0;
+  return total ? Math.round((solved * 100) / total) : 0;
 }
 
 // ===========================
 // NOTES
 // ===========================
+
+// =========================
+// PATTERN GUIDE
+// =========================
+
+// let patternGuideQuill = null;
+
+// function initPatternGuideQuill() {
+//   if (patternGuideQuill) return;
+
+//   patternGuideQuill = new Quill("#patternGuideEditor", {
+//     theme: "snow",
+//     readOnly: true,
+//     modules: {
+//       toolbar: false,
+//     },
+//   });
+// }
+
+function findPatternById(patternId) {
+  for (const module of modules) {
+    const pattern = module.patterns?.find((p) => p.id === patternId);
+
+    if (pattern) {
+      return pattern;
+    }
+  }
+
+  return null;
+}
+
+function openPatternGuide(patternId) {
+  const pattern = findPatternById(patternId);
+
+  if (!pattern) {
+    showToast("Pattern not found.", "error");
+    return;
+  }
+
+  if (
+    !pattern.learning ||
+    pattern.learning.format !== "html" ||
+    !pattern.learning.html
+  ) {
+    showToast("Learning guide will be added soon...", "info");
+    return;
+  }
+
+  const editor = document.getElementById("patternGuideEditor");
+
+  // Create the Shadow DOM once.
+  if (!editor.shadowRoot) {
+    editor.attachShadow({ mode: "open" });
+  }
+
+  const shadow = editor.shadowRoot;
+
+  shadow.innerHTML = "";
+
+  // Pattern-specific CSS
+  const style = document.createElement("style");
+  style.textContent = pattern.learning.css || "";
+
+const globalStyle = document.createElement("style");
+globalStyle.textContent = `
+  /* ===== Pattern Learning — Graphite + Indigo Theme ===== */
+
+  .guide-content{background:#202329;color:#e8ebf2}
+  .guide-content h1,.guide-content h2,.guide-content h3{color:#f4f6fa}
+  .guide-content p{color:#cdd2dc}
+
+  .guide-hero{background:linear-gradient(135deg,#2b3039,#363d4b);border-color:#454c59}
+  .guide-eyebrow{color:#9eafff}
+  .guide-lead{color:#d7dbe4}
+
+  .guide-section h2{color:#f4f6fa}
+  .guide-section h3{color:#e8ebf2}
+
+  .guide-callout{background:linear-gradient(135deg,#292e36,#343a45);border-left-color:#788cf0;color:#dfe3eb}
+
+  .state-card{background:linear-gradient(135deg,#272c34,#313640);border-color:#414752}
+  .state-card p{color:#c8ced8}
+  .state-icon{background:#39404b;color:#b9c5ff}
+
+  .guide-list{color:#cdd2dc}
+  .clue{background:linear-gradient(135deg,#272c34,#303640);border-color:#414752;color:#d5dae3}
+
+  .code-card{background:#191c21;border-color:#3d434d}
+  .code-header{background:linear-gradient(135deg,#2b3039,#343a45);border-bottom-color:#424853;color:#e8ebf2}
+
+  .language-switcher{background:#22262c;border-bottom-color:#393f48}
+  .language-tab{background:#30353d;border-color:#424852;color:#cbd0d9}
+  .language-tab.active{background:#6577d9;color:#fff}
+
+  .language-code pre{background:#16191d;color:#dfe3e9}
+  .language-code code{color:inherit}
+
+  .complexity-grid{color:#cdd2dc}
+  .trigger-section .guide-callout{color:#e5e8ee}
+`;
+
+  // Pattern-specific HTML
+  const content = document.createElement("div");
+  content.className = "pattern-guide-content";
+  content.innerHTML = pattern.learning.html;
+
+  shadow.appendChild(style);
+  shadow.appendChild(globalStyle);
+  shadow.appendChild(content);
+
+  content.querySelectorAll(".language-switcher").forEach((switcher) => {
+  const group = switcher.dataset.codeGroup;
+
+  switcher.querySelectorAll(".language-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const language = tab.dataset.language;
+
+        switcher.querySelectorAll(".language-tab").forEach((btn) => {
+          btn.classList.toggle("active", btn === tab);
+        });
+
+        content
+          .querySelectorAll(`.language-code[data-code-group="${group}"]`)
+          .forEach((block) => {
+            block.classList.toggle(
+              "active",
+              block.dataset.language === language
+            );
+          });
+      });
+    });
+  });
+
+  document.getElementById("patternGuideTitle").textContent =
+    `${pattern.id} · ${pattern.title}`;
+
+  document.getElementById("patternGuideModal").classList.add("show");
+}
+
+// function openPatternGuide(patternId) {
+//   const pattern = findPatternById(patternId);
+
+//   if (!pattern) {
+//     showToast("Pattern not found.", "error");
+//     return;
+//   }
+
+//   if (
+//     !pattern.learning ||
+//     pattern.learning.format !== "quill" ||
+//     !pattern.learning.content
+//   ) {
+//     showToast("Learning guide is not available for this pattern.", "error");
+//     return;
+//   }
+
+//   initPatternGuideQuill();
+
+//   document.getElementById("patternGuideTitle").textContent =
+//     `${pattern.id} · ${pattern.title}`;
+
+//   try {
+//     patternGuideQuill.setContents(pattern.learning.content);
+//   } catch (error) {
+//     console.error("Failed to load Pattern Guide:", error);
+//     showToast("Could not load the learning guide.", "error");
+//     return;
+//   }
+
+//   document.getElementById("patternGuideModal").classList.add("show");
+// }
+
+function closePatternGuide() {
+  document.getElementById("patternGuideModal").classList.remove("show");
+}
+
+window.openPatternGuide = openPatternGuide;
+window.closePatternGuide = closePatternGuide;
 
 let originalDelta = null;
 let isEditing = false;
@@ -851,6 +1026,24 @@ document.getElementById("homeBtn").onclick = () => {
 // MODAL EVENTS
 // ===========================
 
+// Pattern Guide modal controls
+
+document
+  .getElementById("patternGuideClose")
+  .addEventListener("click", closePatternGuide);
+
+document
+  .getElementById("patternGuideDone")
+  .addEventListener("click", closePatternGuide);
+
+document
+  .getElementById("patternGuideModal")
+  .addEventListener("click", (event) => {
+    if (event.target.id === "patternGuideModal") {
+      closePatternGuide();
+    }
+  });
+
 document.getElementById("closeModal").onclick = () => {
   if (isEditing && hasUnsavedChanges()) {
     document.getElementById("discardModal").classList.add("show");
@@ -933,7 +1126,7 @@ function refreshUI() {
 
   // If user is on Home page
   if (document.getElementById("homePage").style.display !== "none") {
-      return;
+    return;
   }
   // Otherwise simply go back Home
   document.getElementById("homePage").style.display = "block";
@@ -954,11 +1147,11 @@ const sidebar = document.getElementById("moduleList");
 const overlay = document.getElementById("sidebarOverlay");
 
 menuBtn.onclick = () => {
-    sidebar.classList.toggle("open");
-    overlay.classList.toggle("show");
+  sidebar.classList.toggle("open");
+  overlay.classList.toggle("show");
 };
 
 overlay.onclick = () => {
-    sidebar.classList.remove("open");
-    overlay.classList.remove("show");
+  sidebar.classList.remove("open");
+  overlay.classList.remove("show");
 };
