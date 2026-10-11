@@ -64,10 +64,6 @@ quill.clipboard.addMatcher(Node.ELEMENT_NODE, (node, delta) => {
   delta.ops = delta.ops.map((op) => {
     if (!op.attributes) return op;
 
-    delete op.attributes.font;
-    delete op.attributes.size;
-    delete op.attributes.color;
-
     if ("background" in op.attributes) {
       op.attributes.background = "#302b3d";
     }
