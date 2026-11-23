@@ -19,6 +19,7 @@ const BACKUP_KEYS = [
   "pattern_note_",
   "problem_note_",
   "streak_",
+  "revise_",
 ];
 const APP_VERSION = "1.0.1";
 let pendingBackup = null;
@@ -37,6 +38,7 @@ const kPatternNote = (id) => "pattern_note_" + id,
   kP = (m, p, id) => `prob_${m}_${p}_${id}`,
   kPr = (m, id) => `practice_${m}_${id}`,
   kCP = (cp, id) => `checkpoint_${cp}_${id}`;
+const kRevise = (id) => "revise_" + id;
 
 const quill = new Quill("#noteEditor", {
   theme: "snow",
@@ -375,7 +377,7 @@ function show(m) {
   document.getElementById("modulePage").style.display = "block";
 
   let c = document.getElementById("modulePage");
-  let h = `<h2>${m.name}</h2><h3>Patterns</h3>`;
+  let h = `<h2>${m.name}</h2>${getFilterBarHTML()}<h3>Patterns</h3>`;
   m.patterns.forEach((p) => {
     h += `
           <div class="pattern">
@@ -462,6 +464,13 @@ onclick="openNote(
 📝
 </span>
 
+<span
+class="problem-star ${localStorage.getItem(kRevise(x.id)) === "true" ? "starred" : ""}"
+title="Revise Later"
+onclick="toggleRevise('${x.id}', this)">
+${localStorage.getItem(kRevise(x.id)) === "true" ? "⭐" : "☆"}
+</span>
+
 <img
 class="platform-logo"
 src="logos/${platformLogo[x.platform]}"
@@ -525,6 +534,13 @@ onclick="openNote(
 '${x.name}'
 )">
 📝
+</span>
+
+<span
+class="problem-star ${localStorage.getItem(kRevise(x.id)) === "true" ? "starred" : ""}"
+title="Revise Later"
+onclick="toggleRevise('${x.id}', this)">
+${localStorage.getItem(kRevise(x.id)) === "true" ? "⭐" : "☆"}
 </span>
 
 <img
@@ -607,7 +623,7 @@ function showCheckpoint(cp) {
           <p style="color:#7dd3fc; font-weight:bold;">
             Test yourself before moving ahead.
           </p>
-
+          ${getFilterBarHTML()}
           <div class="practice">
               <h3>Practice Problems</h3>
           `;
@@ -650,6 +666,13 @@ onclick="openNote(
 ${JSON.stringify(x.name).replace(/"/g, "&quot;")}
 )">
 📝
+</span>
+
+<span
+class="problem-star ${localStorage.getItem(kRevise(x.id)) === "true" ? "starred" : ""}"
+title="Revise Later"
+onclick="toggleRevise('${x.id}', this)">
+${localStorage.getItem(kRevise(x.id)) === "true" ? "⭐" : "☆"}
 </span>
 
 <img
@@ -1171,3 +1194,202 @@ overlay.onclick = () => {
   sidebar.classList.remove("open");
   overlay.classList.remove("show");
 };
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const moduleList = document.getElementById("moduleList");
+
+    const progressCard = document.getElementById("overallProgressBar")?.closest(".dashboard-card");
+    const modulesCard = document.getElementById("moduleCompletedText")?.closest(".dashboard-card");
+
+    const openSidebarOnMobile = () => {
+        if (window.innerWidth <= 768 && menuBtn && moduleList && !moduleList.classList.contains("open")) {
+            menuBtn.click();
+        }
+    };
+
+    [progressCard, modulesCard].forEach((card) => {
+        if (!card) return;
+        card.addEventListener("click", openSidebarOnMobile);
+    });
+});
+
+
+// ===========================
+// FILTER BAR, REVISE STAR & ESCAPE KEY
+// ===========================
+
+function getFilterBarHTML() {
+  return `
+    <div class="filter-bar">
+      <input
+        type="text"
+        id="problemSearchInput"
+        class="filter-search"
+        placeholder="🔍 Search problems..."
+        oninput="applyProblemFilters()">
+      <div class="filter-chips">
+        <button type="button" class="filter-chip active" data-status="all" onclick="setStatusFilter(this)">All</button>
+        <button type="button" class="filter-chip" data-status="unsolved" onclick="setStatusFilter(this)">Unsolved</button>
+        <button type="button" class="filter-chip" data-status="revise" onclick="setStatusFilter(this)">⭐ Revise</button>
+      </div>
+      <select id="difficultyFilter" class="filter-select" onchange="applyProblemFilters()">
+        <option value="all">All Difficulties</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+  `;
+}
+
+function setStatusFilter(btn) {
+  document.querySelectorAll(".filter-chip").forEach((b) => b.classList.remove("active"));
+  btn.classList.add("active");
+  applyProblemFilters();
+}
+
+function applyProblemFilters() {
+  const searchEl = document.getElementById("problemSearchInput");
+  const diffEl = document.getElementById("difficultyFilter");
+  const activeChip = document.querySelector(".filter-chip.active");
+
+  const search = searchEl ? searchEl.value.trim().toLowerCase() : "";
+  const status = activeChip ? activeChip.dataset.status : "all";
+  const diff = diffEl ? diffEl.value : "all";
+  const isFiltering = search !== "" || status !== "all" || diff !== "all";
+
+  document.querySelectorAll("#modulePage .problem-row").forEach((row) => {
+    const title = row.querySelector(".problem-title")?.textContent.toLowerCase() || "";
+    const isSolved = row.querySelector('input[type="checkbox"]')?.checked || false;
+    const isStarred = row.querySelector(".problem-star")?.classList.contains("starred") || false;
+    const rowDiff = row.querySelector(".tag")?.textContent.trim().toLowerCase() || "";
+
+    const matchesSearch = title.includes(search);
+    const matchesDiff = diff === "all" || rowDiff === diff;
+    const matchesStatus =
+      status === "all" ||
+      (status === "unsolved" && !isSolved) ||
+      (status === "revise" && isStarred);
+
+    row.style.display = matchesSearch && matchesDiff && matchesStatus ? "" : "none";
+  });
+
+  // Auto-expand patterns that have matching problems while filtering
+  document.querySelectorAll("#modulePage .pattern").forEach((pattern) => {
+    const rows = pattern.querySelectorAll(".problem-row");
+    const hasVisible = Array.from(rows).some((r) => r.style.display !== "none");
+    const body = pattern.querySelector(".pattern-body");
+    const arrow = pattern.querySelector(".arrow");
+
+    if (isFiltering) {
+      pattern.style.display = hasVisible ? "" : "none";
+      if (hasVisible && body && arrow) {
+        body.classList.add("show");
+        arrow.innerText = "▼";
+      }
+    } else {
+      pattern.style.display = "";
+    }
+  });
+}
+
+function toggleRevise(problemId, el) {
+  const key = kRevise(problemId);
+  const next = localStorage.getItem(key) !== "true";
+  if (next) {
+    localStorage.setItem(key, "true");
+    el.textContent = "⭐";
+    el.classList.add("starred");
+  } else {
+    localStorage.removeItem(key);
+    el.textContent = "☆";
+    el.classList.remove("starred");
+  }
+  markDataModified();
+  applyProblemFilters();
+}
+
+window.setStatusFilter = setStatusFilter;
+window.applyProblemFilters = applyProblemFilters;
+window.toggleRevise = toggleRevise;
+
+// Close active modal with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+
+  if (document.getElementById("discardModal").classList.contains("show")) {
+    document.getElementById("discardModal").classList.remove("show");
+  } else if (document.getElementById("restoreModal").classList.contains("show")) {
+    document.getElementById("cancelRestore").click();
+  } else if (document.getElementById("cloudRestoreModal").classList.contains("show")) {
+    document.getElementById("cancelCloudRestore").click();
+  } else if (document.getElementById("cloudUploadModal").classList.contains("show")) {
+    document.getElementById("cancelCloudUpload").click();
+  } else if (document.getElementById("patternGuideModal").classList.contains("show")) {
+    closePatternGuide();
+  } else if (document.getElementById("noteModal").classList.contains("show")) {
+    document.getElementById("closeModal").click();
+  } else if (feedbackModal.classList.contains("show")) {
+    closeFeedbackModal();
+  }
+});
+
+
+
+// ===========================
+// FEEDBACK MODAL (FORMSPREE)
+// ===========================
+
+const feedbackModal = document.getElementById("feedbackModal");
+const feedbackForm = document.getElementById("feedbackForm");
+const submitFeedbackBtn = document.getElementById("submitFeedbackBtn");
+
+function closeFeedbackModal() {
+  feedbackModal.classList.remove("show");
+}
+
+document.getElementById("feedbackBtn").addEventListener("click", () => {
+  feedbackModal.classList.add("show");
+});
+
+document.getElementById("closeFeedbackModal").addEventListener("click", closeFeedbackModal);
+document.getElementById("cancelFeedback").addEventListener("click", closeFeedbackModal);
+
+feedbackModal.addEventListener("click", (e) => {
+  if (e.target === feedbackModal) closeFeedbackModal();
+});
+
+feedbackForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  submitFeedbackBtn.disabled = true;
+  submitFeedbackBtn.textContent = "Sending...";
+
+  try {
+    const res = await fetch(feedbackForm.action, {
+      method: "POST",
+      body: new FormData(feedbackForm),
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (res.ok) {
+      showToast("Feedback sent! Thank you.");
+      feedbackForm.reset();
+      closeFeedbackModal();
+    } else {
+      const data = await res.json().catch(() => ({}));
+      const msg = data.errors?.map((err) => err.message).join(", ") || "Failed to send feedback.";
+      showToast(msg, "error");
+    }
+  } catch (err) {
+    console.error(err);
+    showToast("Network error. Please try again.", "error");
+  } finally {
+    submitFeedbackBtn.disabled = false;
+    submitFeedbackBtn.textContent = "Send";
+  }
+});

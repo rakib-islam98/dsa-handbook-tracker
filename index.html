@@ -4,7 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSA Handbook Tracker</title>
+    <title>DSA Handbook Tracker — Master Data Structures & Algorithms Patterns</title>
+    <meta name="description"
+        content="Free interactive DSA Handbook Tracker to organize your Data Structures and Algorithms journey. Follow structured DSA patterns, track solved coding problems, save notes, and sync progress.">
+    <meta name="keywords"
+        content="DSA, DSA handbook tracker, DSA tracker, DSA patterns, data structures and algorithms, coding interview roadmap, leetcode tracker, algorithm patterns">
+    <meta name="author" content="Rakib Islam">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dsa-handbook-tracker.rakib98.workers.dev/">
+
+    <!-- Open Graph (for social & search previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DSA Handbook Tracker — Master DSA Patterns & Track Progress">
+    <meta property="og:description"
+        content="Follow a structured DSA roadmap, track solved problems by difficulty, save rich pattern notes, and sync your coding streak.">
+    <meta property="og:url" content="https://dsa-handbook-tracker.rakib98.workers.dev/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DSA Handbook Tracker">
+    <meta name="twitter:description"
+        content="Interactive DSA pattern roadmap, problem tracker, notes editor, and cloud sync.">
+
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "DSA Handbook Tracker",
+    "url": "https://dsa-handbook-tracker.rakib98.workers.dev/",
+    "description": "Interactive web app for tracking Data Structures and Algorithms (DSA) patterns, solved problems, study streaks, and personal notes.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web",
+    "author": {
+        "@type": "Person",
+        "name": "Rakib Islam"
+    }
+    }
+    </script>
 
     <link rel="icon" type="image/x-icon" href="./logos/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./logos/favicon-32x32.png">
@@ -24,10 +61,10 @@
     <header class="topbar">
         <h1>
             <span class="desktop-title">
-                🚀 DSA Handbook Tracker
+                <span class="emoji">🚀</span> DSA Handbook Tracker
             </span>
             <span class="mobile-title">
-                🚀 DSA Tracker
+                <span class="emoji">🚀</span> DSA Tracker
             </span>
         </h1>
         <div class="topbar-actions">
@@ -38,6 +75,10 @@
             <button id="homeBtn" class="home-btn">
                 <span class="desktop-text">🏠 Home</span>
                 <span class="mobile-text">🏠</span>
+            </button>
+            <button id="feedbackBtn" class="feedback-btn" title="Report a bug or share feedback">
+                <span class="desktop-text">💬 Feedback</span>
+                <span class="mobile-text">💬</span>
             </button>
         </div>
     </header>
@@ -62,7 +103,7 @@
             <section id="homePage">
                 <div class="dashboard-card">
 
-                    <h2>Welcome 👋</h2>
+                    <h2>Welcome <span class="emoji">👋</span></h2>
                     <p class="welcome-subtitle">
                         Your personal companion for organizing and tracking your DSA journey.
                     </p>
@@ -279,7 +320,7 @@
     </div>
 
 
-<!-- =========================
+    <!-- =========================
     PATTERN GUIDE MODAL
 ========================= -->
 
@@ -422,6 +463,46 @@
                     Upload
                 </button>
             </div>
+        </div>
+    </div>
+
+    <div id="feedbackModal" class="modal">
+        <div class="confirm-box feedback-box">
+            <div class="feedback-header">
+                <h3>💬 Send Feedback</h3>
+                <button id="closeFeedbackModal" type="button" class="pattern-guide-close"
+                    aria-label="Close feedback">✕</button>
+            </div>
+            <p class="feedback-subtitle">Found a broken link, bug, or have a suggestion? Drop a quick message below.</p>
+            <form id="feedbackForm" action="https://formspree.io/f/xbgoppyn" method="POST">
+                <!-- Honeypot spam trap (keep hidden) -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <div class="feedback-field">
+                    <label for="feedbackType">Category</label>
+                    <select id="feedbackType" name="category">
+                        <option value="Bug / Broken Link">🐞 Bug / Broken Link</option>
+                        <option value="Improvement">💡 Improvement / Idea</option>
+                        <option value="General">💬 General Feedback</option>
+                    </select>
+                </div>
+
+                <div class="feedback-field">
+                    <label for="feedbackEmail">Your Email</label>
+                    <input type="email" id="feedbackEmail" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="feedback-field">
+                    <label for="feedbackMessage">Message</label>
+                    <textarea id="feedbackMessage" name="message" rows="4" placeholder="Describe the issue or idea..."
+                        required></textarea>
+                </div>
+
+                <div class="confirm-buttons">
+                    <button type="button" id="cancelFeedback">Cancel</button>
+                    <button type="submit" id="submitFeedbackBtn">Send</button>
+                </div>
+            </form>
         </div>
     </div>
 

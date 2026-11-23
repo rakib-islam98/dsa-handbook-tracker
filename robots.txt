@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dsa-handbook-tracker.rakib98.workers.dev/sitemap.xml
